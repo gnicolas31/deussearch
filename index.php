@@ -68,7 +68,7 @@
                     <div class="banner-content">
                         <h2 class="title" data-i18n="indextitle">Trouves le jeu qui te correspond</h2>
                         <?php 
-                        $number_of_games = $conn->query("SELECT id FROM deus_Games");
+                        $number_of_games = $conn->query("SELECT id FROM deus_games");
                         ?>
                         <span class="sub-title" data-i18n="indexsubtitle">En seulement 10 questions, notre algorithme vous propose une liste de jeux adaptée à vos envies parmis les <?php echo $number_of_games->num_rows; ?> disponibles.</span>
                         <div class="banner-btn-area">
