@@ -28,10 +28,10 @@
                                         // la function qui va me permettre de reverse les resultats de certaines questions (necessaire pour l'algo du big five)
                                         function reverse_big_five_result($val) {
                                             // si l'user a mis 1, je lui met 5, si 2 je met 4 si 3 je met 3
-                                            if($val == 1) { $val = 5;}
-                                            if($val == 2) { $val = 4;}
-                                            if($val == 5) { $val = 1;}
-                                            if($val == 4) { $val = 2;}
+                                            if($val == 0) { $val = 4;}
+                                            if($val == 1) { $val = 3;}
+                                            if($val == 3) { $val = 1;}
+                                            if($val == 4) { $val = 0;}
                                             return $val;
                                         }
                                     
@@ -61,20 +61,36 @@
                                             /////
                                             $nouveaute_val[] = reverse_big_five_result($_POST['ouverture_val_1']);
                                             $nouveaute_val[] = $_POST['ouverture_val_2'];
-                                            $nouveaute_reference = ($nouveaute_val[0]+$nouveaute_val[1]) / 2;
+
+                                            if($nouveaute_val[0] == 0 && $nouveaute_val[1] == 0) {
+                                                $nouveaute_reference = 0;
+                                            } else {
+                                                $nouveaute_reference = ($nouveaute_val[0]+$nouveaute_val[1]) / 2;
+                                            }
 
                                             $challenge_val[] = reverse_big_five_result($_POST['conscencieux_val_1']);
                                             $challenge_val[] = $_POST['conscencieux_val_2'];
-                                            $challenge_reference = ($challenge_val[0]+$challenge_val[1]) / 2;
+                                            if($challenge_val[0] == 0 && $challenge_val[1] == 0) {
+                                                $challenge_reference = 0;
+                                            } else {
+                                                $challenge_reference = ($challenge_val[0]+$challenge_val[1]) / 2;
+                                            }
 
                                             $stimulation_val[] = reverse_big_five_result($_POST['extraversion_val_1']);
                                             $stimulation_val[] = $_POST['extraversion_val_2'];
-                                            $stimulation_reference = ($stimulation_val[0]+$stimulation_val[1]) / 2;
+                                            if($stimulation_val[0] == 0 && $stimulation_val[1] == 0) {
+                                                $stimulation_val = 0;
+                                            } else {
+                                                $stimulation_reference = ($stimulation_val[0]+$stimulation_val[1]) / 2;
+                                            }
 
                                             $harmonie_val[] = $_POST['agreabilite_val_1'];
                                             $harmonie_val[] = reverse_big_five_result($_POST['agreabilite_val_2']);
-                                            $harmonie_reference = ($harmonie_val[0]+$harmonie_val[1]) / 2;
- 
+                                            if($harmonie_val[0] == 0 && $harmonie_val[1] == 0) {
+                                                $harmonie_reference = 0;
+                                            } else {
+                                                $harmonie_reference = ($harmonie_val[0]+$harmonie_val[1]) / 2;
+                                            }
                                             // RECUPERATION DE LA PLATEFORME
                                             ///////
                                             $id_platform = $_POST['platform'];

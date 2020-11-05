@@ -118,73 +118,73 @@
 
                                     <fieldset class="deus_form">
                                         <legend> Tu es quelqu'un d'introverti, de reservé</legend>
-                                        <label for="extraval1_1" class="deus_radio"><input type="radio" name="extraversion_val_1" value="1" id="extraval1_1" >Pas d'accord du tout</label>
-                                        <label for="extraval1_2" class="deus_radio"><input type="radio" name="extraversion_val_1" value="2" id="extraval1_2"> Plutot pas d'accord</label>
-                                        <label for="extraval1_3" class="deus_radio"><input type="radio" name="extraversion_val_1" value="3" id="extraval1_3"> Neutre</label>
-                                        <label for="extraval1_4 "class="deus_radio"><input type="radio" name="extraversion_val_1" value="4" id="extraval1_4">Plutot d'accord</label>
-                                        <label for="extraval1_5 "class="deus_radio"><input type="radio" name="extraversion_val_1" value="5" id="extraval1_5">Totalement d'accord</label>
+                                        <label for="extraval1_1" class="deus_radio"><input type="radio" name="extraversion_val_1" value="0" id="extraval1_1" >Pas d'accord du tout</label>
+                                        <label for="extraval1_2" class="deus_radio"><input type="radio" name="extraversion_val_1" value="1" id="extraval1_2"> Plutot pas d'accord</label>
+                                        <label for="extraval1_3" class="deus_radio"><input type="radio" name="extraversion_val_1" value="2" id="extraval1_3"> Neutre</label>
+                                        <label for="extraval1_4 "class="deus_radio"><input type="radio" name="extraversion_val_1" value="3" id="extraval1_4">Plutot d'accord</label>
+                                        <label for="extraval1_5 "class="deus_radio"><input type="radio" name="extraversion_val_1" value="4" id="extraval1_5">Totalement d'accord</label>
                                     </fieldset>
 
                                     <fieldset class="deus_form">
                                         <legend>Tu es du genre à te prélasser</legend>
-                                        <label for="consval1_1" class="deus_radio"><input type="radio" name="conscencieux_val_1" value="1" id="consval1_1"> Pas d'accord du tout</label>
-                                        <label for="consval1_2" class="deus_radio"><input type="radio" name="conscencieux_val_1" value="2" id="consval1_2"> Plutot pas d'accord</label>
-                                        <label for="consval1_3" class="deus_radio"><input type="radio" name="conscencieux_val_1" value="3" id="consval1_3"> Neutre</label>
-                                        <label for="consval1_4" class="deus_radio"><input type="radio" name="conscencieux_val_1" value="4" id="consval1_4"> Plutot d'accord</label>
-                                        <label for="consval1_5" class="deus_radio"><input type="radio" name="conscencieux_val_1" value="5" id="consval1_5"> Totalement d'accord</label>
+                                        <label for="consval1_1" class="deus_radio"><input type="radio" name="conscencieux_val_1" value="0" id="consval1_1"> Pas d'accord du tout</label>
+                                        <label for="consval1_2" class="deus_radio"><input type="radio" name="conscencieux_val_1" value="1" id="consval1_2"> Plutot pas d'accord</label>
+                                        <label for="consval1_3" class="deus_radio"><input type="radio" name="conscencieux_val_1" value="2" id="consval1_3"> Neutre</label>
+                                        <label for="consval1_4" class="deus_radio"><input type="radio" name="conscencieux_val_1" value="3" id="consval1_4"> Plutot d'accord</label>
+                                        <label for="consval1_5" class="deus_radio"><input type="radio" name="conscencieux_val_1" value="4" id="consval1_5"> Totalement d'accord</label>
                                     </fieldset>
 
                                     <fieldset class="deus_form">
                                         <legend>Tu portes beaucoup d'interêt au rapport à l'autre</legend>
-                                        <label for="extraval2_1" class="deus_radio"><input type="radio" name="extraversion_val_2" value="1" id="extraval2_1">Pas d'accord du tout</label>
-                                        <label for="extraval2_2" class="deus_radio"><input type="radio" name="extraversion_val_2" value="2" id="extraval2_2">Plutot pas d'accord</label>
-                                        <label for="extraval2_3" class="deus_radio"><input type="radio" name="extraversion_val_2" value="3" id="extraval2_3">Neutre</label>
-                                        <label for="extraval2_4" class="deus_radio"><input type="radio" name="extraversion_val_2" value="4" id="extraval2_4">Plutot d'accord</label>
-                                        <label for="extraval2_5" class="deus_radio"><input type="radio" name="extraversion_val_2" value="5" id="extraval2_5">Totalement d'accord</label>
+                                        <label for="extraval2_1" class="deus_radio"><input type="radio" name="extraversion_val_2" value="0" id="extraval2_1">Pas d'accord du tout</label>
+                                        <label for="extraval2_2" class="deus_radio"><input type="radio" name="extraversion_val_2" value="1" id="extraval2_2">Plutot pas d'accord</label>
+                                        <label for="extraval2_3" class="deus_radio"><input type="radio" name="extraversion_val_2" value="2" id="extraval2_3">Neutre</label>
+                                        <label for="extraval2_4" class="deus_radio"><input type="radio" name="extraversion_val_2" value="3" id="extraval2_4">Plutot d'accord</label>
+                                        <label for="extraval2_5" class="deus_radio"><input type="radio" name="extraversion_val_2" value="4" id="extraval2_5">Totalement d'accord</label>
                                     </fieldset>
 
                                     <fieldset class="deus_form">
                                         <legend> Tu portes peu d'interêt à l'art </legend>
-                                        <label for="ouvval1_1" class="deus_radio"><input type="radio" name="ouverture_val_1" value="1" id="ouvval1_1">Pas du tout</label>
-                                        <label for="ouvval1_2" class="deus_radio"><input type="radio" name="ouverture_val_1" value="2" id="ouvval1_2">Plutot pas d'accord</label>
-                                        <label for="ouvval1_3" class="deus_radio"><input type="radio" name="ouverture_val_1" value="3" id="ouvval1_3">Neutre</label>
-                                        <label for="ouvval1_4" class="deus_radio"><input type="radio" name="ouverture_val_1" value="4" id="ouvval1_4">Plutot d'accord</label>
-                                        <label for="ouvval1_5" class="deus_radio"><input type="radio" name="ouverture_val_1" value="5" id="ouvval1_5">Totalement d'accord</label>
+                                        <label for="ouvval1_1" class="deus_radio"><input type="radio" name="ouverture_val_1" value="0" id="ouvval1_1">Pas du tout</label>
+                                        <label for="ouvval1_2" class="deus_radio"><input type="radio" name="ouverture_val_1" value="1" id="ouvval1_2">Plutot pas d'accord</label>
+                                        <label for="ouvval1_3" class="deus_radio"><input type="radio" name="ouverture_val_1" value="2" id="ouvval1_3">Neutre</label>
+                                        <label for="ouvval1_4" class="deus_radio"><input type="radio" name="ouverture_val_1" value="3" id="ouvval1_4">Plutot d'accord</label>
+                                        <label for="ouvval1_5" class="deus_radio"><input type="radio" name="ouverture_val_1" value="4" id="ouvval1_5">Totalement d'accord</label>
                                     </fieldset>
 
                                     <fieldset class="deus_form">
                                         <legend>Tu portes facilement un jugement sur les autres</legend>
-                                        <label for="agreabval2_1" class="deus_radio"><input type="radio" name="agreabilite_val_2" value="1" id="agreabval2_1">Pas d'accord du tout</label>
-                                        <label for="agreabval2_2" class="deus_radio"><input type="radio" name="agreabilite_val_2" value="2" id="agreabval2_2">Plutot pas d'accord</label>
-                                        <label for="agreabval2_3" class="deus_radio"><input type="radio" name="agreabilite_val_2" value="3" id="agreabval2_3">Neutre</label>
-                                        <label for="agreabval2_4" class="deus_radio"><input type="radio" name="agreabilite_val_2" value="4" id="agreabval2_4">Plutot d'accord</label>
-                                        <label for="agreabval2_5" class="deus_radio"><input type="radio" name="agreabilite_val_2" value="5" id="agreabval2_5">Totalement d'accord</label>
+                                        <label for="agreabval2_1" class="deus_radio"><input type="radio" name="agreabilite_val_2" value="0" id="agreabval2_1">Pas d'accord du tout</label>
+                                        <label for="agreabval2_2" class="deus_radio"><input type="radio" name="agreabilite_val_2" value="1" id="agreabval2_2">Plutot pas d'accord</label>
+                                        <label for="agreabval2_3" class="deus_radio"><input type="radio" name="agreabilite_val_2" value="2" id="agreabval2_3">Neutre</label>
+                                        <label for="agreabval2_4" class="deus_radio"><input type="radio" name="agreabilite_val_2" value="3" id="agreabval2_4">Plutot d'accord</label>
+                                        <label for="agreabval2_5" class="deus_radio"><input type="radio" name="agreabilite_val_2" value="4" id="agreabval2_5">Totalement d'accord</label>
                                     
                                     <fieldset class="deus_form">
                                         <legend>Tu est du genre a te poser des défis régulièrement</legend>
-                                        <label for="consval2_1" class="deus_radio"><input type="radio" name="conscencieux_val_2" value="1" id="consval2_1"> Pas d'accord du tout</label>
-                                        <label for="consval2_2" class="deus_radio"><input type="radio" name="conscencieux_val_2" value="2" id="consval2_2" >Plutot pas d'accord</label>
-                                        <label for="consval2_3" class="deus_radio"><input type="radio" name="conscencieux_val_2" value="3" id="consval2_3" >Neutre</label>
-                                        <label for="consval2_4" class="deus_radio"><input type="radio" name="conscencieux_val_2" value="4" id="consval2_4"> Plutot d'accord</label>
-                                        <label for="consval2_5" class="deus_radio"><input type="radio" name="conscencieux_val_2" value="5" id="consval2_5"> Totalement d'accord</label>
+                                        <label for="consval2_1" class="deus_radio"><input type="radio" name="conscencieux_val_2" value="0" id="consval2_1"> Pas d'accord du tout</label>
+                                        <label for="consval2_2" class="deus_radio"><input type="radio" name="conscencieux_val_2" value="1" id="consval2_2" >Plutot pas d'accord</label>
+                                        <label for="consval2_3" class="deus_radio"><input type="radio" name="conscencieux_val_2" value="2" id="consval2_3" >Neutre</label>
+                                        <label for="consval2_4" class="deus_radio"><input type="radio" name="conscencieux_val_2" value="3" id="consval2_4"> Plutot d'accord</label>
+                                        <label for="consval2_5" class="deus_radio"><input type="radio" name="conscencieux_val_2" value="4" id="consval2_5"> Totalement d'accord</label>
                                     </fieldset>
 
                                     <fieldset class="deus_form">
                                         <legend>Tu débordes d'imagination</legend>
-                                        <label for="ouvval2_1" class="deus_radio"><input type="radio" name="ouverture_val_2" value="1" id="ouvval2_1">Pas d'accord du tout</label>
-                                        <label for="ouvval2_2" class="deus_radio"><input type="radio" name="ouverture_val_2" value="2" id="ouvval2_2">Plutot pas d'accord</label>
-                                        <label for="ouvval2_3" class="deus_radio"><input type="radio" name="ouverture_val_2" value="3" id="ouvval2_3">Neutre</label>
-                                        <label for="ouvval2_4" class="deus_radio"><input type="radio" name="ouverture_val_2" value="4" id="ouvval2_4">Plutot d'accord</label>
-                                        <label for="ouvval2_5" class="deus_radio"><input type="radio" name="ouverture_val_2" value="5" id="ouvval2_5">Totalement d'accord</label>
+                                        <label for="ouvval2_1" class="deus_radio"><input type="radio" name="ouverture_val_2" value="0" id="ouvval2_1">Pas d'accord du tout</label>
+                                        <label for="ouvval2_2" class="deus_radio"><input type="radio" name="ouverture_val_2" value="1" id="ouvval2_2">Plutot pas d'accord</label>
+                                        <label for="ouvval2_3" class="deus_radio"><input type="radio" name="ouverture_val_2" value="2" id="ouvval2_3">Neutre</label>
+                                        <label for="ouvval2_4" class="deus_radio"><input type="radio" name="ouverture_val_2" value="3" id="ouvval2_4">Plutot d'accord</label>
+                                        <label for="ouvval2_5" class="deus_radio"><input type="radio" name="ouverture_val_2" value="4" id="ouvval2_5">Totalement d'accord</label>
                                     </fieldset>
 
                                     <fieldset class="deus_form" >
                                         <legend>Tu crois en la bonne foi des gens</legend>
-                                        <label for="agreabval1_1" class="deus_radio"><input type="radio" name="agreabilite_val_1" value="1" id="agreabval1_1">Pas d'accord du tout</label>
-                                        <label for="agreabval1_2" class="deus_radio"><input type="radio" name="agreabilite_val_1" value="2" id="agreabval1_2">Plutot pas d'accord</label>
-                                        <label for="agreabval1_3" class="deus_radio"><input type="radio" name="agreabilite_val_1" value="3" id="agreabval1_3">Neutre</label>
-                                        <label for="agreabval1_4" class="deus_radio"><input type="radio" name="agreabilite_val_1" value="4" id="agreabval1_4">Plutot d'accord</label>
-                                        <label for="agreabval1_5" class="deus_radio"><input type="radio" name="agreabilite_val_1" value="5" id="agreabval1_5">Totalement d'accord</label>
+                                        <label for="agreabval1_1" class="deus_radio"><input type="radio" name="agreabilite_val_1" value="0" id="agreabval1_1">Pas d'accord du tout</label>
+                                        <label for="agreabval1_2" class="deus_radio"><input type="radio" name="agreabilite_val_1" value="1" id="agreabval1_2">Plutot pas d'accord</label>
+                                        <label for="agreabval1_3" class="deus_radio"><input type="radio" name="agreabilite_val_1" value="2" id="agreabval1_3">Neutre</label>
+                                        <label for="agreabval1_4" class="deus_radio"><input type="radio" name="agreabilite_val_1" value="3" id="agreabval1_4">Plutot d'accord</label>
+                                        <label for="agreabval1_5" class="deus_radio"><input type="radio" name="agreabilite_val_1" value="4" id="agreabval1_5">Totalement d'accord</label>
                                     </fieldset>
 
 
@@ -200,23 +200,17 @@
                                         <label for="mode_1" class="deus_radio"><input type="radio" name="mode_id" value="31" id="mode_1">Joueur Solo</label>
                                         <label for="mode_2" class="deus_radio"><input type="radio" name="mode_id" value="" id="mode_2">Les deux me vont</label>
                                         <label for="mode_3" class="deus_radio"><input type="radio" name="mode_id" value="7" id="mode_3">Multijoueur</label>
-                                        <span class="deus_mode_info deus_notice text-right deus_infos"> L'algorithme priorisera les jeux en fonction de ta réponse à cette question.</span>
-                                    </fieldset>> 
+                                        <span class="deus_mode_info deus_notice text-right deus_infos"> La réponse opposé à la votre peux être proposée, c'est juste une préférence.</span>
+                                    </fieldset>    
+                                
 
-                                  <!--         <fieldset class="deus_form" >
+<!--
+                                           <fieldset class="deus_form" >
                                         <legend>Graphique préférés</legend>
                                         <label for="graphic_1" class="deus_radio"><input type="radio" name="graphic_id" value="45" id="graphic_1">2D</label>
                                         <label for="graphic_2" class="deus_radio"><input type="radio" name="graphic_id" value="" id="graphic_2">Sans importance</label>
                                         <label for="graphic_3" class="deus_radio"><input type="radio" name="graphic_id" value="571" id="graphic_3">3D</label>
                                     </fieldset> 
-
-                                    <fieldset class="deus_form" >
-                                        <legend>Colorimetrie</legend>
-                                        <label for="colorimetrie_1" class="deus_radio"><input type="radio" name="colorimetrie_id" value="165" id="colorimetrie_1">Colorful</label>
-                                        <label for="colorimetrie_2" class="deus_radio"><input type="radio" name="colorimetrie_id" value="" id="colorimetrie_2">Sans importance</label>
-                                        <label for="colorimetrie_3" class="deus_radio"><input type="radio" name="colorimetrie_id" value="41" id="colorimetrie_3">Dark</label>
-                                    </fieldset>
-
                                   <fieldset class="deus_form" >
                                         <legend>Univers</legend>
                                         <label for="univers_1" class="deus_radio"><input type="radio" name="univers_id" value="32" id="univers_1">Sci-fi</label>
