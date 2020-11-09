@@ -9,7 +9,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-12 text-center">
                     <div class="inner-banner-content">
-                        <h2 class="title" data-i18n="contact_title">Nous contacter</h2>
+                        <h1 class="title" data-i18n="contact_title">Nous contacter</h1>
                     </div>
                 </div>
             </div>
