@@ -6,22 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Deus Search - Le moteur de recherche des jeux vidéos</title>
     <!-- fontawesome css link -->
-    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <!-- nice-select css -->
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <!-- bootstrap css link -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- favicon -->
     <link rel="shortcut icon" href="assets/images/banner/fav.png" type="image/x-icon">
-    <!-- animate.css -->
-    <link rel="stylesheet" href="assets/css/animate.css">
     <!-- main style css link -->
     <link rel="stylesheet" href="assets/css/style.min.css">
     <!-- responsive css link -->
     <link rel="stylesheet" href="assets/css/responsive.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script> 
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="deussearch.js"></script>
     <meta property="og:image" content="https://deussearch.fr/assets/images/banner/banner.png" />
     <meta name="theme-color" content="#171744" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
