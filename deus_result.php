@@ -50,7 +50,8 @@
                                             foreach(explode(",", $_POST['atout_id']) as $atout) {
                                                 if($atout != '') {
                                                     $config[] = $atout;
-                                                }                                            }
+                                                }                                            
+                                            }
                                             $keywords = [];
                                             foreach ($config as $keyword) {
                                                 if($keyword != NULL) {
@@ -199,14 +200,6 @@
                                                 $indic_diff  = array_column($genre_tab, 0);
                                                 $nb_cases = array_column($genre_tab, 1);
                                                 array_multisort($indic_diff, SORT_ASC, $nb_cases, SORT_ASC, $genre_tab);
-                                            
-                                                $limit_genre = 3;
-                                                if($id_platform != 6 ) {
-                                                    $limit_genre = 5;
-                                                }
-
-                                                // j'add 20% ai coeff pour de la marge 
-                                                $limite_coeff_exclusion = $total_coeff_de_diff_moyenne+(($total_coeff_de_diff_moyenne / 100)*50);   
                                             }
                                 ?>
 
@@ -316,11 +309,18 @@
                                     // 2015 1451606400
                                     // 2013 1356998400
                                 </script>
+                                <?php 
+                                    $unic_id_save = uniqid();
+                                    // ENREGISTREMENT DE LA RECHERCHE EN BDD
+                                    $sql_save_search = "INSERT INTO sauvegarde_recherche (nouveaute, challenge, stimulation, harmonie, platform, tags, genres, u_id, created) VALUES (".$nouveaute_reference.",".$challenge_reference.",".$stimulation_reference.",".$harmonie_reference.",".$id_platform.",'".implode(',',$keywords)."','".implode(',',$genres_inclus_string)."','".$unic_id_save."','".$today_timestamp."')";
+
+                                    $save_search_r = $conn->query($sql_save_search);
+                                ?>
                                 <section class="col-lg-12">
                                     <h3 class="text-left deus_result_titles"> Sortis ces 3 dernières années </h3> 
                                     <row class="row col-lg-12" id="thisyear">
                                         <script>
-                                            do_the_deus_magic("<?php echo implode(',',$genres_inclus_string); ?>", <?php echo $id_platform; ?>,  <?php echo $today_timestamp; ?>,   1483228800 ,'thisyear', 6,1, "<?php echo implode(',',$keywords); ?>");
+                                            do_the_deus_magic("<?php echo implode(',',$genres_inclus_string); ?>", <?php echo $id_platform; ?>,  <?php echo $today_timestamp; ?>,   1483228800 ,'thisyear', 6, "<?php echo implode(',',$keywords); ?>", "<?php echo $unic_id_save; ?>");
                                         </script>
                                     </row>
                                 </section>
@@ -328,7 +328,7 @@
                                     <h3 class="text-left deus_result_titles"> Il y a 3 à 7 ans </h3> 
                                     <row class="row col-lg-12" id="threetosevenyears">
                                         <script>
-                                            do_the_deus_magic("<?php echo implode(',',$genres_inclus_string); ?>", <?php echo $id_platform; ?>,  1483228800  , 1356998400 ,'threetosevenyears', 3,0, "<?php echo implode(',',$keywords); ?>");
+                                            do_the_deus_magic("<?php echo implode(',',$genres_inclus_string); ?>", <?php echo $id_platform; ?>,  1483228800  , 1356998400 ,'threetosevenyears', 3, "<?php echo implode(',',$keywords); ?>", "<?php echo $unic_id_save; ?>");
                                         </script>
                                     </row>
                                 </section>
@@ -336,7 +336,7 @@
                                     <h3 class="text-left deus_result_titles"> Sortis il y a 5 à 10 ans </h3> 
                                     <row class="row col-lg-12" id="morethansevenyears">
                                         <script>
-                                            do_the_deus_magic("<?php echo implode(',',$genres_inclus_string); ?>", <?php echo $id_platform; ?>,1356998400 , 1104537600  ,'morethansevenyears',3,0, "<?php echo implode(',',$keywords); ?>");
+                                            do_the_deus_magic("<?php echo implode(',',$genres_inclus_string); ?>", <?php echo $id_platform; ?>,1356998400 , 1104537600  ,'morethansevenyears',3, "<?php echo implode(',',$keywords); ?>", "<?php echo $unic_id_save; ?>");
                                         </script>
                                     </row>
                                 </section>

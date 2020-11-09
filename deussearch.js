@@ -1,7 +1,7 @@
 ////////
 // the fucking magic
 /////
-function do_the_deus_magic(array_genres, platform,today_timestamp, oldest_timestamp, dom_elem, limit_tab, saveornot, keywords) {
+function do_the_deus_magic(array_genres, platform,today_timestamp, oldest_timestamp, dom_elem, limit_tab, keywords, unic_id_ofsave) {
     
     $('#deus_loader span').text('Filtrage par genres');
     $.ajax({
@@ -16,8 +16,10 @@ function do_the_deus_magic(array_genres, platform,today_timestamp, oldest_timest
             deus_results = JSON.parse(deus_results);
             if(deus_results.length > 0) {
                 var i_displayed=0;
+                var deus_save_results = [];
                 for (var i = 0; i < deus_results.length; i++) {
                     if(i_displayed < limit_tab) {
+                        deus_save_results[i_displayed] = deus_results[i].id;
                         var rating = deus_results[i].rating;
                         var deus_result_game_id = deus_results[i].id;
                         var genre = '';
@@ -57,6 +59,11 @@ function do_the_deus_magic(array_genres, platform,today_timestamp, oldest_timest
                         i_displayed++;
                     }
                 }
+                $.ajax({
+                    method: "POST",
+                    url: "saveresults.php",
+                    data: { 'unic_id' : unic_id_ofsave, 'results' : deus_save_results}
+                });
             } else {
                 $("#"+dom_elem).append('<p> Aucun résultat sur cette tranche temporelle. </p>');
             }

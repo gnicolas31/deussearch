@@ -117,7 +117,7 @@
                         </div>
                         <div class="header-search-bar">
                            <form method="get" id="searchsimpleform" action="#">
-                                <input id="searchbox" type="text" name="s" placeholder="Recherche">
+                                <input id="searchbox" type="text" name="s" placeholder="Recherche par titre">
                                 <button class="header-search-btn"><i class="fas fa-search"></i></button>
                                 <div id="search_result">
                                     Faîtes une recherche

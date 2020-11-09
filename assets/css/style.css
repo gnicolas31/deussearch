@@ -4493,6 +4493,14 @@ span, li, h1, h1 > a, h2, h2 > a, h3, h3 > a, h4, h4 > a, h5, h5 > a, h6, h6 > a
   display: block;
 }
 
+.deus_allsearch_table {
+  color: white;
+}
+.deus_allsearch_table td {
+  width:250px;
+  border-bottom: 1px solid wheat;
+  padding-bottom: 5px;
+}
 
 .deus_result_simple {
   color: #b3b341;
