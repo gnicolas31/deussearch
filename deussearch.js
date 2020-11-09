@@ -74,6 +74,7 @@ function do_the_deus_magic(array_genres, platform,today_timestamp, oldest_timest
 }
 
 $(document).ready(function() {
+    // la boite de recherche en haut
     $("#searchbox").on("keyup", function() {
         var title = $(this).val();
         $.ajax({
@@ -86,4 +87,12 @@ $(document).ready(function() {
             }
         });
     });
+
+
+    // le formulaire deus search
+    $('.deus_radio').click(function() {
+        $(this).siblings().removeClass('active');
+        $(this).addClass('active');
+    });
+
 });
