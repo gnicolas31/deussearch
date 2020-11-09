@@ -1,5 +1,6 @@
 <?php 
     $class_page = "deus";
+    $title = "Deus Search - Résultats du test";
     include 'connect.php';
     include 'header.php';
 ?>

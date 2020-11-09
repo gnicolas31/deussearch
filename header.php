@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Deus Search - Le moteur de recherche des jeux vidéos</title>
+    <title><?php echo $title; ?></title>
     <!-- favicon -->
     <link rel="shortcut icon" href="assets/images/banner/fav.png" type="image/x-icon">
     <!-- main style css link -->
