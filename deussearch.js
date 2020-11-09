@@ -26,10 +26,13 @@ function do_the_deus_magic(array_genres, platform,today_timestamp, oldest_timest
                         }
                         var cover = deus_results[i].img_url;
                         var video_bloc = '';
+                        var tag_bloc = '';
                         // si rawg alors je prends
-                        console.log(deus_results[i].clip_url.length );
                         if(deus_results[i].clip_url.length > 1) {
                             video_bloc = '<video class="deus_video" id="video_player" loop muted width="250"><source src="'+deus_results[i].clip_url+'" type="video/mp4"> Sorry, your browser doesn\'t support embedded videos.</video>';
+                        }
+                        if(deus_results[i].num_tags) {
+                            tag_bloc = '<p class="deus_same_val" ><span>'+deus_results[i].num_tags+'</span> spécificité(s) </p>';
                         }
                         // sinon rien
                         var bg_url = 'background-image:url("'+cover+'");';
@@ -41,7 +44,8 @@ function do_the_deus_magic(array_genres, platform,today_timestamp, oldest_timest
                                     <div class="game-content"> \
                                         <div class="game-content-body"> \
                                             <h3 class="title">'+deus_results[i].game_name+'</h3>\
-                                            <p class="deus_same_val" ><span>'+deus_results[i].num_genres+'</span> genre(s) correspondants </p>\
+                                            <p class="deus_same_val" ><span>'+deus_results[i].num_genres+'</span> genre(s) </p>\
+                                            '+tag_bloc+'\
                                             '+video_bloc+'\
                                         </div> \
                                     </div> \

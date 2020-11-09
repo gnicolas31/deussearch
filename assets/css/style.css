@@ -4455,10 +4455,6 @@ span, li, h1, h1 > a, h2, h2 > a, h3, h3 > a, h4, h4 > a, h5, h5 > a, h6, h6 > a
   justify-content: space-between;
 }
 
-.deus_meta_infos>div+div ul{
-  flex-direction: row-reverse;
-}
-
 #searchsimpleform {
   position: relative;
 }

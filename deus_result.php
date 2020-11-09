@@ -43,14 +43,14 @@
                                             // RECUPERATION DES MOTS CLES
                                             //////
                                             foreach(explode(",", $_POST['mode_id']) as $mode) {
-                                                $config[] = $mode;
+                                                if($mode != '') {
+                                                    $config[] = $mode;
+                                                }
                                             }
-                                            $config[] = $_POST['graphic_id'];
-                                            $config[] = $_POST['colorimetrie_id'];
-                                            $config[] = $_POST['univers_id'];
-                                            $config[] = $_POST['rythme_id'];
-                                            $config[] = $_POST['imme_graph_id'];
-                
+                                            foreach(explode(",", $_POST['atout_id']) as $atout) {
+                                                if($atout != '') {
+                                                    $config[] = $atout;
+                                                }                                            }
                                             $keywords = [];
                                             foreach ($config as $keyword) {
                                                 if($keyword != NULL) {
@@ -242,7 +242,7 @@
                                         </div>
                                         <div class="text-right">
                                             <?php
-                                            if($config[0] > 0) {
+                                            if(count($config) > 0) {
                                             ?>
                                                 <span> Spécificité </span>
                                                 <ul class="deus_result_genres_sim">
@@ -311,7 +311,6 @@
                                     });
  
 
-                                    connect_twitch();
                                     // 2020 1577836800
                                     // 2017 1483228800 
                                     // 2015 1451606400
@@ -329,7 +328,7 @@
                                     <h3 class="text-left deus_result_titles"> Il y a 3 à 7 ans </h3> 
                                     <row class="row col-lg-12" id="threetosevenyears">
                                         <script>
-                                            do_the_deus_magic("<?php echo implode(',',$genres_inclus_string); ?>", <?php echo $id_platform; ?>,  1483228800  , 1356998400 ,'threetosevenyears', 6,0, "<?php echo implode(',',$keywords); ?>");
+                                            do_the_deus_magic("<?php echo implode(',',$genres_inclus_string); ?>", <?php echo $id_platform; ?>,  1483228800  , 1356998400 ,'threetosevenyears', 3,0, "<?php echo implode(',',$keywords); ?>");
                                         </script>
                                     </row>
                                 </section>
@@ -337,7 +336,7 @@
                                     <h3 class="text-left deus_result_titles"> Sortis il y a 5 à 10 ans </h3> 
                                     <row class="row col-lg-12" id="morethansevenyears">
                                         <script>
-                                            do_the_deus_magic("<?php echo implode(',',$genres_inclus_string); ?>", <?php echo $id_platform; ?>,1356998400 , 1104537600  ,'morethansevenyears',6,0, "<?php echo implode(',',$keywords); ?>");
+                                            do_the_deus_magic("<?php echo implode(',',$genres_inclus_string); ?>", <?php echo $id_platform; ?>,1356998400 , 1104537600  ,'morethansevenyears',3,0, "<?php echo implode(',',$keywords); ?>");
                                         </script>
                                     </row>
                                 </section>
