@@ -67,7 +67,7 @@
             <div class="row align-items-center mb-30-none">
                 <div class="col-lg-8 mb-30">
                     <div class="banner-content">
-                        <h2 class="title" data-i18n="indextitle">Trouves le jeu qui te correspond</h2>
+                        <h1 class="title" data-i18n="indextitle">Trouves le jeu qui te correspond</h1>
                         <?php 
                         $number_of_games = $conn->query("SELECT id FROM deus_games");
                         ?>
