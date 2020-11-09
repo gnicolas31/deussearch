@@ -1,11 +1,5 @@
 <!DOCTYPE html>
-<?php 
-    $current_language = 'fr';
-    if($_COOKIE['language_deussearch'] != NULL) {
-        $current_language = $_COOKIE['language_deussearch'];
-    };
-?>
-<html lang="<?php echo $current_language; ?>"  dir="ltr">
+<html lang="fr>"  dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,10 +46,6 @@
 </head>
 <body class="<?php echo $class_page; ?>">
     <?php 
-        $search_word = 'Je recherche _';
-        if($_GET['s']) {
-            $search_word = $_GET['s'];
-        }
         $header_banner_img = "header_dofus.png";
     ?>
 
@@ -126,12 +116,13 @@
                             </ul>                 
                         </div>
                         <div class="header-search-bar">
-                        <!--    <form method="get" action="search_result.php">
-                           <form method="get" action="#">
-                                <input type="text" name="s" placeholder="<?php echo $search_word; ?>">
+                           <form method="get" id="searchsimpleform" action="#">
+                                <input id="searchbox" type="text" name="s" placeholder="Recherche par titre">
                                 <button class="header-search-btn"><i class="fas fa-search"></i></button>
+                                <div id="search_result">
+                                    Faîtes une recherche
+                                </div>
                             </form>
-    -->
                         </div>
                     </nav>
                 </div>

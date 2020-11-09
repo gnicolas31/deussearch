@@ -204,6 +204,15 @@
                                     </fieldset>    
                                 
 
+                                    <fieldset class="deus_form" >
+                                        <legend>Ton atout principal chez un jeu </span> ?</legend>
+                                        <label for="atout_1" class="deus_radio"><input type="radio" name="atout_id" value="118" id="atout_1">L'histoire</label>
+                                        <label for="atout_2" class="deus_radio"><input type="radio" name="atout_id" value="" id="atout_2">Moi j'aime les deux</label>
+                                        <label for="atout_3" class="deus_radio"><input type="radio" name="atout_id" value="42" id="atout_3">Le son</label>
+                                        <span class="deus_mode_info deus_notice text-right deus_infos"> La réponse opposé à la votre peux être proposée, c'est juste une préférence.</span>
+                                    </fieldset>    
+                                
+
 <!--
                                            <fieldset class="deus_form" >
                                         <legend>Graphique préférés</legend>
