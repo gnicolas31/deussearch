@@ -5,13 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><?php echo $title; ?></title>
+    <meta name="description" content="Répondez à un test de personnalité et découvrez des jeux adaptés.Profitez de votre confinement pour jouer à de nouvelles licences XBOX, Playstation ou PC."> <!-- Meta Description -->
     <!-- favicon -->
     <link rel="shortcut icon" href="assets/images/banner/fav.png" type="image/x-icon">
     <!-- main style css link -->
     <link rel="stylesheet" href="assets/css/style.min.css">
     <!-- responsive css link -->
     <link rel="stylesheet" href="assets/css/responsive.css">
+
+
+    <meta property="og:title" content="<?php echo $title; ?>" />
+    <meta property="og:site_name" content="Deus Search" />
+    <meta property="og:description" content="Répondez à un test de personnalité et découvrez des jeux adaptés.Profitez de votre confinement pour jouer à de nouvelles licences XBOX, Playstation ou PC." />
     <meta property="og:image" content="https://deussearch.fr/assets/images/banner/banner.png" />
+
+
     <meta name="theme-color" content="#171744" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGNBVJEK2R"></script>
