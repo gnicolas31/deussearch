@@ -320,7 +320,9 @@
                                     <h3 class="text-left deus_result_titles"> Sortis ces 3 dernières années </h3> 
                                     <row class="row col-lg-12" id="thisyear">
                                         <script>
-                                            do_the_deus_magic("<?php echo implode(',',$genres_inclus_string); ?>", <?php echo $id_platform; ?>,  <?php echo $today_timestamp; ?>,   1483228800 ,'thisyear', 6, "<?php echo implode(',',$keywords); ?>", "<?php echo $unic_id_save; ?>");
+                                            window.addEventListener("DOMContentLoaded", (event) => {
+                                                do_the_deus_magic("<?php echo implode(',',$genres_inclus_string); ?>", <?php echo $id_platform; ?>,  <?php echo $today_timestamp; ?>,   1483228800 ,'thisyear', 6, "<?php echo implode(',',$keywords); ?>", "<?php echo $unic_id_save; ?>");
+                                            });
                                         </script>
                                     </row>
                                 </section>
@@ -328,7 +330,9 @@
                                     <h3 class="text-left deus_result_titles"> Il y a 3 à 7 ans </h3> 
                                     <row class="row col-lg-12" id="threetosevenyears">
                                         <script>
-                                            do_the_deus_magic("<?php echo implode(',',$genres_inclus_string); ?>", <?php echo $id_platform; ?>,  1483228800  , 1356998400 ,'threetosevenyears', 3, "<?php echo implode(',',$keywords); ?>", "<?php echo $unic_id_save; ?>");
+                                            window.addEventListener("DOMContentLoaded", (event) => {
+                                                do_the_deus_magic("<?php echo implode(',',$genres_inclus_string); ?>", <?php echo $id_platform; ?>,  1483228800  , 1356998400 ,'threetosevenyears', 3, "<?php echo implode(',',$keywords); ?>", "<?php echo $unic_id_save; ?>");
+                                            });
                                         </script>
                                     </row>
                                 </section>
@@ -336,7 +340,9 @@
                                     <h3 class="text-left deus_result_titles"> Sortis il y a 5 à 10 ans </h3> 
                                     <row class="row col-lg-12" id="morethansevenyears">
                                         <script>
-                                            do_the_deus_magic("<?php echo implode(',',$genres_inclus_string); ?>", <?php echo $id_platform; ?>,1356998400 , 1104537600  ,'morethansevenyears',3, "<?php echo implode(',',$keywords); ?>", "<?php echo $unic_id_save; ?>");
+                                            window.addEventListener("DOMContentLoaded", (event) => {
+                                                do_the_deus_magic("<?php echo implode(',',$genres_inclus_string); ?>", <?php echo $id_platform; ?>,1356998400 , 1104537600  ,'morethansevenyears',3, "<?php echo implode(',',$keywords); ?>", "<?php echo $unic_id_save; ?>");
+                                            });
                                         </script>
                                     </row>
                                 </section>

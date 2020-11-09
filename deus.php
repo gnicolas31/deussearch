@@ -242,10 +242,6 @@
 
 
                                     <script>
-                                        $('.deus_radio').click(function() {
-                                            $(this).siblings().removeClass('active');
-                                            $(this).addClass('active');
-                                        });
                                     </script>
                                 </div>
                                
@@ -256,22 +252,6 @@
                                 </div>
                             </div>
                         </form>	   
-                        <script>
-                            $('#deus_form').submit(function(event) {
-                                $('.submit_field .notice').empty();
-                                event.preventDefault(); //this will prevent the default submit
-                                
-                                if(!$('#platform').val()){
-                                    $('.submit_field .notice').show();
-                                    $('.submit_field .notice').append('<p> Renseignes une plateforme.. </p>');
-                                }
-                                else if($('#platform').val()) {
-                                       $(this).unbind('submit').submit(); // continue the submit unbind preventDefault
-                                }
-                                
-                                // your code here (But not asynchronous code such as Ajax because it does not wait for response and move to next line.)
-                            });
-                        </script>
                     </div>
                 </div>
             </div>
