@@ -101,13 +101,8 @@
 <script src="assets/js/jquery.waypoints.min.js"></script>
 <!-- counterup js -->
 <script src="assets/js/jquery.counterup.min.js"></script>
-<!-- datepicker js -->
-<script src="assets/js/datepicker.min.js"></script>
-<!-- datepicker js -->
-<script src="assets/js/datepicker.en.js"></script>
 <!-- wow js file -->
 <script src="assets/js/wow.min.js"></script>
-<script src="assets/js/plugin.js"></script>
 <!-- paroller js -->
 <script src="assets/js/jquery.paroller.min.js"></script>
 <!-- main -->
