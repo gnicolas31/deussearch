@@ -1,5 +1,6 @@
 <?php 
     $class_page = "deus";
+    $title = "Des jeux adaptés à votre personnalité - Deus Search";
     include 'header.php';
 
 

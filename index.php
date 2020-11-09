@@ -1,5 +1,6 @@
 <?php 
     $class_page = "home";
+    $title = "Deus Search - Le moteur de recherche des jeux vidéos";
     include 'header.php';
     include 'connect.php';
 ?>

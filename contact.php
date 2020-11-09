@@ -1,5 +1,6 @@
 <?php 
     $class_page = "contact";
+    $title = "Deus Search - Nous contacter";
     include 'header.php';
 ?>
     <!-- inner-banner-section start -->
