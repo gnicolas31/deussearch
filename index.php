@@ -67,11 +67,11 @@
             <div class="row align-items-center mb-30-none">
                 <div class="col-lg-8 mb-30">
                     <div class="banner-content">
-                        <h1 class="title" data-i18n="indextitle">Trouves le jeu qui te correspond</h1>
+                        <h1 class="title" data-i18n="indextitle">Trouves le jeu vidéo qui te correspond</h1>
                         <?php 
                         $number_of_games = $conn->query("SELECT id FROM deus_games");
                         ?>
-                        <span class="sub-title" data-i18n="indexsubtitle">En seulement 10 questions, notre algorithme vous propose une liste de jeux adaptée à vos envies parmis les <?php echo $number_of_games->num_rows; ?> disponibles.</span>
+                        <span class="sub-title" data-i18n="indexsubtitle">En seulement 10 questions, notre algorithme vous propose une liste de jeux vidéos adaptée à vos envies parmis les <?php echo $number_of_games->num_rows; ?> disponibles.</span>
                         <div class="banner-btn-area">
                             <a href="deus.php" class="cmn-btn">Recherche Deus Search<i class="fas fa-long-arrow-alt-right"></i></a>
                        <!--      <a href="#0" class="cmn-btn-border">En savoir plus</a> -->
@@ -127,7 +127,7 @@
                                         <img src="assets/images/about/about-1.png" alt="about">
                                     </div>
                                     <h3 class="title" data-i18n="index_bloc_1_title">Des jeux uniques</h3>
-                                    <p  data-i18n="index_bloc_1_p">Découvrez de nouvelles licences qui sortent du lot. </p>
+                                    <p  data-i18n="index_bloc_1_p">Découvrez de nouvelles licences qui sortent du lot grâce à un test de la personnalité. </p>
                                 </div>
                             </div>
                             <div class="col-lg-6">
@@ -136,7 +136,7 @@
                                         <img src="assets/images/about/about-2.png" alt="about">
                                     </div>
                                     <h3 class="title" data-i18n="index_bloc_2_title">Une expérience sans égale</h3>
-                                    <p  data-i18n="index_bloc_2_p"> Faîtes vous plaisir sur le jeu qui vous correspond parmis les <?php echo $number_of_games->num_rows; ?> disponibles. </p>
+                                    <p  data-i18n="index_bloc_2_p"> Faîtes vous plaisir sur le jeu vidéo qui vous correspond parmis les <?php echo $number_of_games->num_rows; ?> disponibles. </p>
                                 </div>
                             </div>
                             <div class="col-lg-6 mb-30">
@@ -145,7 +145,7 @@
                                         <img src="assets/images/about/about-3.png" alt="about">
                                     </div>
                                     <h3 class="title" data-i18n="index_bloc_3_title">Pour les gamers</h3>
-                                    <p  data-i18n="index_bloc_3_p">Un outil poussé fournissant une nouvelle approche de la recherche de jeux vidéos. </p>
+                                    <p  data-i18n="index_bloc_3_p">Un test de personnalité fournissant une nouvelle approche de la recherche de jeux vidéos. </p>
                                 </div>
                             </div>
                             <div class="col-lg-6 mb-30">
@@ -163,9 +163,9 @@
                 <div class="col-lg-6 mb-30">
                     <div class="about-content">
                         <h3 class="sub-title" data-i18n="index_side_subtitle">Une recherche unique</h3>
-                        <h2 class="title" data-i18n="index_side_title">Découvrez des jeux adaptés à votre personnalité</h2>
+                        <h2 class="title" data-i18n="index_side_title">Découvrez des jeux vidéos adaptés à votre personnalité</h2>
                         <p >Notre algorithme trouve le jeux vidéo qui correspond à vos envies et votre matériel et votre personnalité en un rien de temps. </p>
-                        <p> Découvrez ou redécouvrez des licences que vous avez ratées ! N'attendez plus pour découvrir des jeux indépendants ou triple A qui correspondent à votre envie ! </p>
+                        <p> Découvrez ou redécouvrez des licences que vous avez ratées ! N'attendez plus pour découvrir des jeux indépendants ou triple A qui correspondent à votre personnalité ! </p>
                         <div class="about-content-btn">
                             <a href="deus.php" class="cmn-btn">Je trouve mon jeu<i class="fas fa-long-arrow-alt-right"></i></a>
                         </div>
