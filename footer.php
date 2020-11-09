@@ -71,7 +71,7 @@
                     </div>
                     <div class="copyright-area d-flex flex-wrap justify-content-between">
                         <div class="copyright-content">
-                            <p>V0.8.5 - Copyright © <?php echo date(Y); ?>.<span data-i18n="copyright">All Rights Reserved By </span><a href="#">DeusSearch</a></p>
+                            <p>V0.8.6 - Copyright © <?php echo date(Y); ?>.<span data-i18n="copyright">All Rights Reserved By </span><a href="#">DeusSearch</a></p>
                         </div>
                     </div>
                 </div>
@@ -101,13 +101,8 @@
 <script src="assets/js/jquery.waypoints.min.js"></script>
 <!-- counterup js -->
 <script src="assets/js/jquery.counterup.min.js"></script>
-<!-- datepicker js -->
-<script src="assets/js/datepicker.min.js"></script>
-<!-- datepicker js -->
-<script src="assets/js/datepicker.en.js"></script>
 <!-- wow js file -->
 <script src="assets/js/wow.min.js"></script>
-<script src="assets/js/plugin.js"></script>
 <!-- paroller js -->
 <script src="assets/js/jquery.paroller.min.js"></script>
 <!-- main -->
