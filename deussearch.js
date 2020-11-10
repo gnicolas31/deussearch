@@ -1,12 +1,12 @@
 ////////
 // the fucking magic
 /////
-function do_the_deus_magic(array_genres, platform,today_timestamp, oldest_timestamp, dom_elem, limit_tab, keywords, unic_id_ofsave) {
+function do_the_deus_magic(array_genres, platform,today_timestamp, oldest_timestamp, dom_elem, limit_tab, keywords, unic_id_ofsave, urlfixer) {
     
     $('#deus_loader span').text('Filtrage par genres');
     $.ajax({
         method: "POST",
-        url: "deus_get_games.php",
+        url: urlfixer+"deus_get_games.php",
         //  ou platform, themes et genres correspondent, ou date est entre le filtre, un min rating adapté (sur pc trop de jeux) a la console, limit 3 et tri adapté (au nombre de vote sur pc, a la note sur les consoles) 
 
         data: {'genres' : array_genres, 'keywords' : keywords, 'platform' : platform, 'recent_date' : today_timestamp, 'oldest_date' : oldest_timestamp },
@@ -61,7 +61,7 @@ function do_the_deus_magic(array_genres, platform,today_timestamp, oldest_timest
                 }
                 $.ajax({
                     method: "POST",
-                    url: "saveresults.php",
+                    url: urlfixer+"saveresults.php",
                     data: { 'unic_id' : unic_id_ofsave, 'results' : deus_save_results}
                 });
             } else {

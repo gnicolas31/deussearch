@@ -1,5 +1,12 @@
 <!DOCTYPE html>
-<html lang="fr" dir="ltr">
+<?php 
+    if($lang == 'fr') {
+        include('languages/fr.php');
+    } else {
+        include('languages/en.php');
+    }
+?>
+<html lang="<?php echo $language; ?>" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +14,12 @@
     <title><?php echo $title; ?></title>
     <meta name="description" content="Répondez à un test de personnalité et découvrez des jeux adaptés.Profitez de votre confinement pour jouer à de nouvelles licences XBOX, Playstation ou PC."> <!-- Meta Description -->
     <!-- favicon -->
-    <link rel="shortcut icon" href="assets/images/banner/fav.png" type="image/x-icon">
+    <link rel="shortcut icon" href="<?php echo $cssandjsurlfix; ?>assets/images/banner/fav.png" type="image/x-icon">
     <!-- main style css link -->
-    <link rel="stylesheet" href="assets/css/style.min.css">
+    <link rel="stylesheet" href="<?php echo $cssandjsurlfix; ?>assets/css/style.css">
     <!-- responsive css link -->
-    <link rel="stylesheet" href="assets/css/responsive.css">
-
+    <link rel="stylesheet" href="<?php echo $cssandjsurlfix; ?>assets/css/style.min.css">
+    <link rel="stylesheet" href="<?php echo $cssandjsurlfix; ?>assets/css/responsive.css">
 
     <meta property="og:title" content="<?php echo $title; ?>" />
     <meta property="og:site_name" content="Deus Search" />
@@ -50,26 +57,33 @@
 
 
     <!-- header-section start -->
-    <header class="header-section">
+    <header class="header-section deus_head">
         <div class="header">
             <div class="header-top-area">
                 <div class="container">
                     <div class="header-top-content d-flex flex-wrap align-items-center justify-content-between">
                         <div class="header-logo">
-                            <a class="site-logo site-title" href="index.php"><img src="assets/images/banner/logo.png" alt="site-logo"></a>
+                            <a class="site-logo site-title" href="index.php"><img src="<?php echo $cssandjsurlfix; ?>assets/images/banner/logo.png" alt="site-logo"></a>
                         </div>
                         <div class="header-right d-flex flex-wrap align-items-center">
                             <div class="language-select-list d-flex flex-wrap">
                                 <div class="language-thumb">
-                                    <img src="assets/images/lang.png" alt="language">
+                                    <img src="<?php echo $cssandjsurlfix; ?>assets/images/lang.png" alt="language">
                                 </div>
                                 <div class="language-select">
-                                    <select class="select-bar">
-                                        <option value="1">Languages</option>
-                                        <option>Francais</option>
+                                    <ul class="lang_select">
+                                        <?php
+                                        $fr_url = "#";
+                                        $en_url = 'en/';
+                                        if($lang == 'en') {
+                                            $fr_url = '../';
+                                            $en_url = "#";
+                                        }
+                                        ?>
+                                        <li><a href="<?php echo $fr_url; ?>">Francais</a></li>
+                                        <li><a href="<?php echo $en_url; ?>">English</a></li>
                                       <!--  <option>English</option>-->
-                                    </select>
-                                    
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -79,13 +93,13 @@
             <div class="header-bottom">
                 <div class="container">
                     <nav class="navbar navbar-expand-lg p-0">
-                        <a class="site-logo site-title d-lg-none" href="index.php"><img src="assets/images/banner/logo.png" alt="site-logo"></a>
+                        <a class="site-logo site-title d-lg-none" href="index.php"><img src="<?php echo $cssandjsurlfix; ?>assets/images/banner/logo.png" alt="site-logo"></a>
                         <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="fas fa-bars"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav main-menu">
-                                <li active_meta="home"><a href="index.php" data-i18n="homepage">Accueil</a></li>
+                                <li active_meta="home"><a href="index.php" data-i18n="homepage"><?php echo $i18n->menu->accueil; ?></a></li>
                                 <li class="deus_class" active_meta="deus"><a href="deus.php">Deus Search</a></li>
                                 <!-- <li class="menu_has_children"><a href="#0">Les jeux</a>  
                                     <ul class="sub-menu">
@@ -99,15 +113,15 @@
                                     </ul>
                                 </li>
                                 <li><a href="#0">A propos</a></li> -->
-                                <li active_meta="contact"><a href="contact.php">Contact</a></li>
+                                <li active_meta="contact"><a href="contact.php"><?php echo $i18n->menu->contact; ?></a></li>
                             </ul>                 
                         </div>
                         <div class="header-search-bar">
                            <form method="get" id="searchsimpleform" action="#">
-                                <input id="searchbox" type="text" name="s" placeholder="Recherche par titre">
+                                <input id="searchbox" type="text" name="s" placeholder="<?php echo $i18n->general->search_placeholder; ?>">
                                 <button class="header-search-btn"><i class="fas fa-search"></i></button>
                                 <div id="search_result">
-                                    Faîtes une recherche
+                                    <?php echo $i18n->general->search_result_holder; ?>
                                 </div>
                             </form>
                         </div>
