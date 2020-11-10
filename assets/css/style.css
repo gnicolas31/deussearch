@@ -2401,7 +2401,7 @@ rgba(255, 255, 255, 0.15);
   position: relative;
   padding: 10px;
   width: 100%;
-  flex-basis: 130px;
+  flex-basis: 120px;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -ms-transition: all 0.3s;
@@ -2683,4 +2683,60 @@ span, li, h1, h1 > a, h2, h2 > a, h3, h3 > a, h4, h4 > a, h5, h5 > a, h6, h6 > a
   color: #b3b341;
   border-left: 2px solid;
   padding-left: 9px;
+}
+
+.lang_select {
+  margin-bottom: 0;
+}
+
+.lang_select li {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 5px 10px;
+}
+.lang_select li a {    
+  color: #cecece;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+} 
+.lang_select li:hover a{    
+  color: rgb(149, 169, 210);
+} 
+
+a {
+  text-decoration: none !important;
+}
+
+.contact-area {
+  padding: auto;
+}
+.contact-area.deus_bloc {
+  padding:50px 0px;
+}
+
+.contact-area > div,
+.contact-area > p,
+.contact-area > form{
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+@media (max-width:991px) {
+  .deus_head .navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;    
+    padding: 0px 15px !important;
+  }
+  .deus_head .navbar-toggler .fa-bars {
+    line-height: 45px;
+  }
+  .contact .inner-banner-section {
+    padding-top: 100px !important;
+    padding-bottom: 200px !important;
+  }
 }
