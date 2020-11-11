@@ -34,7 +34,7 @@ function do_the_deus_magic(array_genres, platform,today_timestamp, oldest_timest
                             video_bloc = '<video class="deus_video" id="video_player" loop muted width="250"><source src="'+deus_results[i].clip_url+'" type="video/mp4"> Sorry, your browser doesn\'t support embedded videos.</video>';
                         }
                         if(deus_results[i].num_tags) {
-                            tag_bloc = '<p class="deus_same_val" ><span>'+deus_results[i].num_tags+'</span> spécificité(s) </p>';
+                            tag_bloc = '<p class="deus_same_val" ><span>'+deus_results[i].num_tags+'</span> préférence(s) </p>';
                         }
                         // sinon rien
                         var bg_url = 'background-image:url("'+cover+'");';
@@ -96,3 +96,7 @@ $(document).ready(function() {
     });
 
 });
+
+function share_fb(url) {
+    window.open('https://www.facebook.com/sharer/sharer.php?u='+url,'facebook-share-dialog',"width=626, height=436")
+}
