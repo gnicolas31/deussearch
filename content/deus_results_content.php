@@ -1,5 +1,5 @@
  <!-- inner-banner-section start -->
- <section class="inner-banner-section inner-banner-section--style bg-overlay-black bg bg_img" data-background="assets/images/<?php echo $header_banner_img; ?>">
+ <section class="inner-banner-section inner-banner-section--style bg-overlay-black bg bg_img" data-background="<?php echo $cssandjsurlfix; ?>assets/images/<?php echo $header_banner_img; ?>">
         <div class="container">
             
         </div>
@@ -12,10 +12,17 @@
             <div class="row justify-content-center">
                 <div class="col-lg-12 text-center">
                     <div class="contact-area deus_version deus_bloc">
+                        <h1 class="title_deus_test"> <?php echo $i18n->deus_results->title; ?></h1>
                         <div class="contact-form-area">
                             <div class="row justify-content-center mb-30-none" id="deus_result">
 
                                 <?php 
+
+                                    /// MORE GLOBALS DATA GOES HERE
+                                    //
+                                    ///////
+                                    $unic_id_save = uniqid();
+
                                     ////
                                     /// FUNCTIONS GOES HERE
                                     //////
@@ -200,11 +207,11 @@
                                 <!-- Display Graph -->
                                 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
                                 <div class="deus_canvas col-lg-12">
-                                    <h2 class="text-left"> Votre profil </h2> 
+                                    <h2 class="text-left"> <?php echo $i18n->deus_results->profile; ?> </h2> 
                                     <canvas id="myChart" width="770" height="250"></canvas>
                                     <section class="deus_meta_infos text-left">
                                         <div>
-                                            <span> Genres recommandés </span>
+                                            <span><?php echo $i18n->deus_results->genres; ?>   </span>
                                             <ul class="deus_result_genres_sim">
                                                 <?php 
                                                 $i = 0;
@@ -231,7 +238,7 @@
                                             <?php
                                             if(count($config) > 0) {
                                             ?>
-                                                <span> Spécificité </span>
+                                                <span> <?php echo $i18n->deus_results->specificity; ?> </span>
                                                 <ul class="deus_result_genres_sim">
                                                     <?php 
                                                     include('connect.php');
@@ -254,6 +261,19 @@
                                             ?>
                                         </div>
                                     </section>
+                                    <section class="deus_meta_infos text-left deus_result_social">
+                                        <span> <?php echo $i18n->deus_results->share; ?></span>    
+                                        <ul class="blog-social">
+                                            <?php 
+                                                $url_to_share = "https://www.deussearch.fr/deus_results.php?id=".$unic_id_save;
+                                                if($lang != 'fr') {
+                                                    $url_to_share = "https://www.deussearch.fr/en/deus_results.php?id=".$unic_id_save;
+                                                }
+                                            ?>
+                                            <li><a href="#0" class="fb-share-button" onclick="share_fb('<?php echo $url_to_share; ?>');return false;" rel="nofollow" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                            <li><a target="_blank" title="<?php echo $i18n->deus_results->sharelinktitle; ?>" href="<?php echo $url_to_share; ?>"> <i class="fas fa-link"></i> </a></li>
+                                        </ul>
+                                    </section>
                                 </div>
                                 <script>
                                     //// 
@@ -263,7 +283,7 @@
                                     var myChart = new Chart(ctx, {
                                     type: 'horizontalBar',
                                     data: {
-                                        labels: ['Découverte', 'Challenge', 'Stimulation', 'Immersion'],
+                                        labels: ['<?php echo $i18n->deus_results->decouverte; ?>', 'Challenge', 'Stimulation', 'Immersion'],
                                         datasets: [{
                                             data: [ <?php echo $nouveaute_reference; ?>,  <?php echo $challenge_reference; ?>,  <?php echo $stimulation_reference; ?>,  <?php echo $harmonie_reference; ?>],
                                             backgroundColor: [
@@ -304,14 +324,13 @@
                                     // 2013 1356998400
                                 </script>
                                 <?php 
-                                    $unic_id_save = uniqid();
                                     // ENREGISTREMENT DE LA RECHERCHE EN BDD
                                     $sql_save_search = "INSERT INTO sauvegarde_recherche (nouveaute, challenge, stimulation, harmonie, platform, tags, genres, u_id, created) VALUES (".$nouveaute_reference.",".$challenge_reference.",".$stimulation_reference.",".$harmonie_reference.",".$id_platform.",'".implode(',',$keywords)."','".implode(',',$genres_inclus_string)."','".$unic_id_save."','".$today_timestamp."')";
 
                                     $save_search_r = $conn->query($sql_save_search);
                                 ?>
                                 <section class="col-lg-12">
-                                    <h3 class="text-left deus_result_titles"> Sortis ces 3 dernières années </h3> 
+                                    <h3 class="text-left deus_result_titles">  <?php echo $i18n->deus_results->lastthreeyears; ?></h3> 
                                     <row class="row col-lg-12" id="thisyear">
                                         <script>
                                             window.addEventListener("DOMContentLoaded", (event) => {
@@ -321,17 +340,17 @@
                                     </row>
                                 </section>
                                 <section class="col-lg-12">
-                                    <h3 class="text-left deus_result_titles"> Il y a 3 à 7 ans </h3> 
+                                    <h3 class="text-left deus_result_titles"> <?php echo $i18n->deus_results->threetofiveyears; ?> </h3> 
                                     <row class="row col-lg-12" id="threetosevenyears">
                                         <script>
                                             window.addEventListener("DOMContentLoaded", (event) => {
-                                                do_the_deus_magic("<?php echo implode(',',$genres_inclus_string); ?>", <?php echo $id_platform; ?>,  1483228800  , 1356998400 ,'threetosevenyears', 3, "<?php echo implode(',',$keywords); ?>", "<?php echo $unic_id_save; ?>", '<?php echo $cssandjsurlfix; ?>');
+                                                do_the_deus_magic("<?php echo implode(',',$genres_inclus_string); ?>", <?php echo $id_platform; ?>,  1483228800  , 1451606400 ,'threetosevenyears', 3, "<?php echo implode(',',$keywords); ?>", "<?php echo $unic_id_save; ?>", '<?php echo $cssandjsurlfix; ?>');
                                             });
                                         </script>
                                     </row>
                                 </section>
                                 <section  class="col-lg-12">
-                                    <h3 class="text-left deus_result_titles"> Sortis il y a 5 à 10 ans </h3> 
+                                    <h3 class="text-left deus_result_titles"> <?php echo $i18n->deus_results->fivetotenyears; ?>  </h3> 
                                     <row class="row col-lg-12" id="morethansevenyears">
                                         <script>
                                             window.addEventListener("DOMContentLoaded", (event) => {
@@ -340,7 +359,7 @@
                                         </script>
                                     </row>
                                 </section>
-                                <span class="text-left deus_notice deus_info" data-i18n="deus_form_notice_postform"><?php echo $i18n->deus_results->notice; ?>
+                                <span class="text-left deus_notice deus_info"><?php echo $i18n->deus_results->notice; ?>
                                 </span>
                             </div>
                         </div>

@@ -67,11 +67,13 @@
                     <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center">
                         <div class="footer-logo">
                             <a href="#0"><img src="<?php echo $cssandjsurlfix; ?>assets/images/banner/logo.png" alt="logo"></a>
+                            <p class="deus_footer_p"> <?php echo $i18n->general->subtitle; ?></p>
+                            <p class="deus_footer_p"> <?php echo $i18n->general->footer_subtitle; ?> </p>
                         </div>
                     </div>
                     <div class="copyright-area d-flex flex-wrap justify-content-between">
                         <div class="copyright-content">
-                            <p>V0.8.8.2 - Copyright © <?php echo date(Y); ?>.<span data-i18n="copyright">All Rights Reserved By </span><a href="#">DeusSearch</a></p>
+                            <p>V0.9 - Copyright © <?php echo date(Y); ?>.<span>All Rights Reserved By </span><a href="#">DeusSearch</a></p>
                         </div>
                     </div>
                 </div>
@@ -98,7 +100,6 @@
 <!-- main -->
 <script src="<?php echo $cssandjsurlfix; ?>assets/js/main.js"></script>
 
-
 <script>
     //////////
     // trick for the menu, set active the good one with the class page
@@ -111,7 +112,7 @@
         
         $("head").append($('<link rel="stylesheet" href="<?php echo $cssandjsurlfix; ?>assets/css/keyframes.css">'));
         $("head").append($('<link rel="stylesheet" href="<?php echo $cssandjsurlfix; ?>assets/css/nice-select.css">'));
-        $("head").append($('<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">'));
+        $("head").append($('<link rel="stylesheet" href="<?php echo $cssandjsurlfix; ?>assets/css/bootstrap.min.css">'));
         $("head").append($('<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">'));
     });
 </script>

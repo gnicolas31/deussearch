@@ -3,38 +3,45 @@
 // LE MENU 
 //////
 $i18n->menu->accueil = "Accueil";
+$i18n->menu->deus = "Faire le test !";
 $i18n->menu->contact = "Contact";
 
 // GENERAL 
 //////
+$i18n->general->subtitle = "Le 1er moteur de recherche de jeux vidéo en fonction de ta personnalité !";
 $i18n->general->search_placeholder = "Recherche par titre";
 $i18n->general->search_result_holder = "Faîtes une recherche";
-                $i18n->general->page_title->contact = "Deus Search - Nous contacter";
-                $i18n->general->page_title->index = "Deus Search - Le moteur de recherche des jeux vidéos";
+$i18n->general->description = "Répondez à un test de personnalité et découvrez des jeux vidéo adaptés. Jouez à de nouvelles licences XBOX, Playstation ou PC.";
+$i18n->general->footer_subtitle = "Notre test de personnalité vous permet de trouver les jeux vidéo qui vous correspondent le mieux !";
 
 
 // ACCUEIL 
 //////
 $i18n->index->main_title = 'Trouves le jeu vidéo qui te correspond';
-$i18n->index->main_subtitle_1 = 'En seulement 11 questions, notre algorithme vous propose une liste de jeux vidéos adaptée à vos envies parmis les ';
-$i18n->index->main_subtitle_2 = ' disponibles';
-$i18n->index->deus_button1 = "Recherche deus search";
+$i18n->index->main_subtitle_1 = "En seulement 11 questions, découvres une liste allant jusqu'a 12 jeux vidéo correspondant à ta personnalité parmis les";
+$i18n->index->main_subtitle_2 = " disponibles, c'est rapide efficace et simple !";
+$i18n->index->deus_button1 = "Je fais mon test";
 $i18n->index->about_bloc1_title = "Des jeux uniques"; 
 $i18n->index->about_bloc2_title = "Une expérience sans égale"; 
 $i18n->index->about_bloc3_title = "Pour les gamers"; 
 $i18n->index->about_bloc4_title = "Par des gamers"; 
 $i18n->index->about_bloc1_text = "Découvrez de nouvelles licences qui sortent du lot grâce à un test de la personnalité."; 
 $i18n->index->about_bloc2_text = "Faîtes vous plaisir sur le jeu vidéo qui vous correspond parmis les 38360 disponibles."; 
-$i18n->index->about_bloc3_text = "Un test de personnalité fournissant une nouvelle approche de la recherche de jeux vidéos. "; 
+$i18n->index->about_bloc3_text = "Un test de personnalité fournissant une nouvelle approche de la recherche de jeux vidéo. "; 
 $i18n->index->about_bloc4_text = "Parce-que nous aussi nous avons passé trop de temps à chercher un bon jeu."; 
 $i18n->index->about_blue_title = "Une recherche unique"; 
-$i18n->index->about_title = "Découvrez des jeux vidéos adaptés à votre personnalité";
-$i18n->index->about_text = "Notre algorithme trouve le jeux vidéo qui correspond à vos envies et votre matériel et votre personnalité en un rien de temps. <br /><br />Découvrez ou redécouvrez des licences que vous avez ratées ! N'attendez plus pour découvrir des jeux indépendants ou triple A qui correspondent à votre personnalité ! ";
+$i18n->index->about_title = "Découvrez des jeux vidéo adaptés à votre personnalité";
+$i18n->index->about_text = "Notre algorithme trouve le jeux vidéo qui correspond à vos envies et votre matériel et votre personnalité en un rien de temps. <br /><br /> Découvrez des jeux vidéo , autant des triples A comme Red Dead Redemption ou Valorant que des licences moins connues comme Vagrant ou Noita !";
 $i18n->index->about_button = "Je trouve mon jeu";
+$i18n->index->last_results->title = " Derniers résultats";
+$i18n->index->last_results->blue_title = "Jeux vidéo issus des derniers résultats du test de personnalité ";
+$i18n->index->last_results->notice = "Vous aussi faîtes votre test et découvrez des jeux vidéo adaptés à votre personnalité ! ";
+$i18n->index->last_results->button = "Je fais mon test !";
 
 // DEUS FORM
 //////
-$i18n->deus_search->text = "Ce questionnaire de 11 questions permettra de définir ta personnalité et te proposera une liste allant jusqu'a 12 jeux proposant une expérience de jeu adaptée.";
+$i18n->deus_search->title = 'Test de personnalité Deus Search';
+$i18n->deus_search->text = "Ce questionnaire de 11 questions permettra de définir ta personnalité et te proposera une liste allant jusqu'a 12 jeux vidéo adaptés.";
 $i18n->deus_search->question1 = "Sur quoi veux-tu jouer ?";
 $i18n->deus_search->question2 = "Tu es quelqu'un d'introverti, de reservé";
 $i18n->deus_search->question3 = "Tu es du genre à te prélasser";
@@ -63,7 +70,22 @@ $i18n->deus_search->answer->atout->sound = "La bande-son";
 
 // DEUS RESULTS
 ///////
+$i18n->deus_results->share ="Je partage mes résultats"; 
+
+
+$i18n->deus_results->title = 'Resultats Deus Search';
+$i18n->deus_results->decouverte = 'Découverte';
 $i18n->deus_results->notice = " Cette étude de la personnalité se base sur le format du Big Five <br />et reprend le format 10 items, réduis à 8, suivant le modèle établi par Jason VandenBerghe. <br />DeusSearch établi une pondération des données que l'utilisateur à rentré pour les comparer à sa base de données.";
+$i18n->deus_results->specificity = 'Préférence(s)';
+$i18n->deus_results->genres = 'Genres recommandés';
+$i18n->deus_results->profile = 'Votre profil';
+$i18n->deus_results->lastthreeyears = "Sortis ces 3 dernières années";
+$i18n->deus_results->threetofiveyears = "Sortis il y a 3 à 5 ans";
+$i18n->deus_results->fivetotenyears = "Sortis il y a 5 à 10 ans";
+
+// DEUS RESULTS OF OTHERS
+///////
+$i18n->deus_results_others->notice = "Vous êtes actuellement ent rain de visualiser les résultats de quelqu'un d'autre.";
 
 // CONTACT 
 //////
