@@ -1,6 +1,6 @@
 <?php
     $class_page = "home";
-    $title = "Deus Search - Le moteur de recherche des jeux vidéos";
+    $title = "Deus Search - Le moteur de recherche des jeux vidéos - Accueil";
     $lang = "fr";    
     $cssandjsurlfix = "";
     include 'connect.php';
