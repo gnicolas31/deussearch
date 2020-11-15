@@ -67,7 +67,8 @@ $i18n->deus_search->answer->mode->multi = "Multijoueur";
 $i18n->deus_search->answer->atout->story = "L'histoire";
 $i18n->deus_search->answer->atout->neutral = "Aucune préférence";
 $i18n->deus_search->answer->atout->sound = "La bande-son";
-
+$i18n->deus_search->form_error_platform = 'Renseignes une plateforme !';
+$i18n->deus_search->form_error_genres = 'Répondez à toutes les questions du formulaire';
 // DEUS RESULTS
 ///////
 $i18n->deus_results->share ="Je partage mes résultats"; 
