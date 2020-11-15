@@ -66,6 +66,9 @@ $i18n->deus_search->answer->mode->multi = "Multiplayer";
 $i18n->deus_search->answer->atout->story = "The story";
 $i18n->deus_search->answer->atout->neutral = "Looking for any types";
 $i18n->deus_search->answer->atout->sound = "The soundtrack";
+$i18n->deus_search->form_error_platform = 'Select a platform !';
+$i18n->deus_search->form_error_genres = 'Answer all the questions on the form';
+
 // DEUS RESULTS
 ///////
 $i18n->deus_results->share = "Share my results !"; 
