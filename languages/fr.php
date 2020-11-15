@@ -37,6 +37,7 @@ $i18n->index->last_results->title = " Derniers résultats";
 $i18n->index->last_results->blue_title = "Jeux vidéo issus des derniers résultats du test de personnalité ";
 $i18n->index->last_results->notice = "Vous aussi faîtes votre test et découvrez des jeux vidéo adaptés à votre personnalité ! ";
 $i18n->index->last_results->button = "Je fais mon test !";
+$i18n->index->deus_button_to_test_title = "Faire mon test de personnalité";
 
 // DEUS FORM
 //////

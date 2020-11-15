@@ -67,7 +67,7 @@
                         ?>
                         <span class="sub-title"><?php echo $i18n->index->main_subtitle_1. ' '.$number_of_games->num_rows.' '.$i18n->index->main_subtitle_2; ?></span>
                         <div class="banner-btn-area">
-                            <a href="deus.php" class="cmn-btn"><?php echo $i18n->index->deus_button1; ?><i class="fas fa-long-arrow-alt-right"></i></a>
+                            <a href="deus.php" title="<?php echo $i18n->index->deus_button_to_test_title; ?>" class="cmn-btn"><?php echo $i18n->index->deus_button1; ?><i class="fas fa-long-arrow-alt-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -156,7 +156,7 @@
                         <h2 class="title" ><?php echo $i18n->index->about_title; ?></h2>
                         <p ><?php echo $i18n->index->about_text; ?></p>
                         <div class="about-content-btn">
-                            <a href="deus.php" class="cmn-btn"><?php echo $i18n->index->about_button; ?><i class="fas fa-long-arrow-alt-right"></i></a>
+                            <a href="deus.php" title="<?php echo $i18n->index->deus_button_to_test_title; ?>" class="cmn-btn"><?php echo $i18n->index->about_button; ?><i class="fas fa-long-arrow-alt-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -221,7 +221,7 @@
                 </div>
                 <div class="about-content-btn">
                     <p>  <?php echo $i18n->index->last_results->notice; ?></p>
-                    <a href="deus.php" class="cmn-btn"> <?php echo $i18n->index->last_results->button; ?><i class="fas fa-long-arrow-alt-right"></i></a>
+                    <a href="deus.php" class="cmn-btn"  title="<?php echo $i18n->index->deus_button_to_test_title; ?>"> <?php echo $i18n->index->last_results->button; ?><i class="fas fa-long-arrow-alt-right"></i></a>
                 </div>
             </div>
         </div>

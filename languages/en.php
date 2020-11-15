@@ -36,6 +36,7 @@ $i18n->index->last_results->title = "Lasts results";
 $i18n->index->last_results->blue_title = "Video games from the latest personality test results ";
 $i18n->index->last_results->notice = "You too take the test and discover video games adapted to your personality! ";
 $i18n->index->last_results->button = "I want to do the test !";
+$i18n->index->deus_button_to_test_title = "Do my personnality test !";
 
 // DEUS FORM
 //////
