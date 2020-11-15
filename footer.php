@@ -73,7 +73,7 @@
                     </div>
                     <div class="copyright-area d-flex flex-wrap justify-content-between">
                         <div class="copyright-content">
-                            <p>V0.9 - Copyright © <?php echo date(Y); ?>.<span>All Rights Reserved By </span><a href="#">DeusSearch</a></p>
+                            <p>V0.9.1 - Copyright © <?php echo date(Y); ?>.<span>All Rights Reserved By </span><a href="#">DeusSearch</a></p>
                         </div>
                     </div>
                 </div>
@@ -87,6 +87,36 @@
 
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script> 
+
+<script>
+$('#deus_form').submit(function () {
+    $('.deus_issue').empty();
+    var mode = $('#mode_id').val();
+    var extra_val_1 = $('input[name=extraversion_val_1]:checked').val();
+    var extra_val_2 = $('input[name=extraversion_val_2]:checked').val();
+    var conscencieux_val_1 = $('input[name=conscencieux_val_1]:checked').val();
+    var conscencieux_val_2 = $('input[name=conscencieux_val_2]:checked').val();
+    var ouverture_val_1 = $('input[name=ouverture_val_1]:checked').val();
+    var ouverture_val_2 = $('input[name=ouverture_val_2]:checked').val();
+    var agreabilite_val_1 = $('input[name=agreabilite_val_1]:checked').val();
+    var agreabilite_val_2 = $('input[name=agreabilite_val_2]:checked').val();
+    var platform = $('#platform').val();
+    if(extra_val_1 === undefined || extra_val_2 === undefined || conscencieux_val_1 === undefined || conscencieux_val_2 === undefined || ouverture_val_1 === undefined || ouverture_val_2 === undefined || agreabilite_val_1 === undefined || agreabilite_val_2 === undefined) {
+        $('.deus_issue').show();
+        $('.deus_issue').append('<span><?php echo $i18n->deus_search->form_error_genres; ?>  </span><br />');
+        if(platform != '') {
+            return false;
+        }
+    }
+
+    if(platform == '') {
+        $('.deus_issue').show();
+        $('.deus_issue').append('<span><?php echo $i18n->deus_search->form_error_platform; ?> </span>');
+        return false;
+    }
+});
+</script>
+
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 <script src="<?php echo $cssandjsurlfix; ?>deussearch.js"></script>
 <!-- migarate-jquery -->
