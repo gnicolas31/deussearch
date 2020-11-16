@@ -2251,7 +2251,7 @@ svg {
 
 .deus_index_row_games {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   width: 100%;
   flex-wrap: wrap;
 }
@@ -2277,6 +2277,7 @@ svg {
 
 .deus_index_row_games>div {
   flex-basis: 250px;
+  margin-bottom: 1em;
   text-align: center;
   background-position: center !important;
   flex-grow: 0;
@@ -2394,6 +2395,7 @@ rgba(255, 255, 255, 0.15);
 
 .deus_result .game-content-body {
   border: none;
+  padding: 0 10px;
 }
 
 
@@ -2794,7 +2796,7 @@ a {
 .contact-area > div,
 .contact-area > p,
 .contact-area > form{
-  max-width: 750px;
+  max-width: 850px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -2803,6 +2805,16 @@ a {
   background:   rgba(28, 29, 85, 0.77);
   font-size: 2em;
   padding: 15px;
+}
+
+.deus_result_titles+div {
+  display: flex;
+  justify-content: space-evenly;
+}
+.deus_result_titles+div>div{
+  flex-basis: 250px;
+  margin-bottom: 1em;
+  flex-shrink: 0;
 }
 
 .title_deus_test i {
