@@ -332,33 +332,33 @@
                                 ?>
                                 <section class="col-lg-12">
                                     <h3 class="text-left deus_result_titles">  <?php echo $i18n->deus_results->lastthreeyears; ?></h3> 
-                                    <row class="row col-lg-12" id="thisyear">
+                                    <div class="row col-lg-12" id="thisyear">
                                         <script>
                                             window.addEventListener("DOMContentLoaded", (event) => {
                                                 do_the_deus_magic("<?php echo implode(',',$genres_inclus_string); ?>", <?php echo $id_platform; ?>,  <?php echo $today_timestamp; ?>,   1483228800 ,'thisyear', 6, "<?php echo implode(',',$keywords); ?>", "<?php echo $unic_id_save; ?>", '<?php echo $cssandjsurlfix; ?>');
                                             });
                                         </script>
-                                    </row>
+                                    </div>
                                 </section>
                                 <section class="col-lg-12">
                                     <h3 class="text-left deus_result_titles"> <?php echo $i18n->deus_results->threetofiveyears; ?> </h3> 
-                                    <row class="row col-lg-12" id="threetosevenyears">
+                                    <div class="row col-lg-12" id="threetosevenyears">
                                         <script>
                                             window.addEventListener("DOMContentLoaded", (event) => {
                                                 do_the_deus_magic("<?php echo implode(',',$genres_inclus_string); ?>", <?php echo $id_platform; ?>,  1483228800  , 1451606400 ,'threetosevenyears', 3, "<?php echo implode(',',$keywords); ?>", "<?php echo $unic_id_save; ?>", '<?php echo $cssandjsurlfix; ?>');
                                             });
                                         </script>
-                                    </row>
+                                    </div>
                                 </section>
                                 <section  class="col-lg-12">
                                     <h3 class="text-left deus_result_titles"> <?php echo $i18n->deus_results->fivetotenyears; ?>  </h3> 
-                                    <row class="row col-lg-12" id="morethansevenyears">
+                                    <div class="row col-lg-12" id="morethansevenyears">
                                         <script>
                                             window.addEventListener("DOMContentLoaded", (event) => {
                                                 do_the_deus_magic("<?php echo implode(',',$genres_inclus_string); ?>", <?php echo $id_platform; ?>,1356998400 , 1104537600  ,'morethansevenyears',3, "<?php echo implode(',',$keywords); ?>", "<?php echo $unic_id_save; ?>", '<?php echo $cssandjsurlfix; ?>');
                                             });
                                         </script>
-                                    </row>
+                                    </div>
                                 </section>
                                 <div class="col-lg-12 deus_meta_infos text-left deus_result_social  deus_sharebottom">
                                     <span> <?php echo $i18n->deus_results->share; ?></span>    
