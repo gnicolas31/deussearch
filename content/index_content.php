@@ -198,14 +198,14 @@
                 <h3> <?php echo $i18n->index->last_results->blue_title; ?> </h3>
                 <div class="deus_index_row_games">
                     <?php 
-                        $index_videogames_construct = "SELECT game_name, clip_url, img_url, id_rawg FROM deus_games WHERE rating > 4 AND clip_url != '' ORDER BY RAND() LIMIT 4";
+                        $index_videogames_construct = "SELECT game_name, slug, clip_url, img_url, id_rawg FROM deus_games WHERE rating > 4 AND clip_url != '' ORDER BY RAND() LIMIT 4";
                         $index_videogames_r = $conn->query($index_videogames_construct);
                         while($index_videogames = mysqli_fetch_array($index_videogames_r)) {
                             ?>
                             <div class="game-item deus_result" style='background:url("<?php echo $index_videogames['img_url']; ?>")' game_id="<?php echo $index_videogames['id_rawg']; ?>"> 
-                                <a class="game_url" target="_blank" href="#">
+                                <a title="<?php echo $i18n->index->last_results->link_titles.' '.$index_videogames['game_name']; ?>"" class="game_url" target="_blank" href="https://rawg.io/games/<?php echo $index_videogames['slug']; ?>">
                                     <div class="game_deus_bg"></div>
-                                    <a href="#" target="_blank" class="game_link"> 
+                                    <a title="<?php echo $i18n->index->last_results->link_titles.' '.$index_videogames['game_name']; ?>"" href="https://rawg.io/games/<?php echo $index_videogames['slug']; ?>" target="_blank" class="game_link"> 
                                         <div class="game-content"> 
                                             <div class="game-content-body"> 
                                                 <h4 class="title"> <?php echo $index_videogames['game_name']; ?></h4>
