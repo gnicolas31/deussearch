@@ -38,8 +38,7 @@ function do_the_deus_magic(array_genres, platform,today_timestamp, oldest_timest
                         }
                         // sinon rien
                         var bg_url = 'background-image:url("'+cover+'");';
-                        $("#"+dom_elem).append('<div class="col-lg-4 col-md-6 col-sm-12 mb-30"> \
-                        <div class="game-item deus_result" style='+bg_url+' game_id="'+deus_results[i].id+'" id="game"> \
+                        $("#"+dom_elem).append('<div class="game-item deus_result" style='+bg_url+' game_id="'+deus_results[i].id+'" id="game"> \
                             <a class="game_url" target="_blank" href="https://rawg.io/games/'+deus_results[i].slug+'">\
                                 <div class="game_deus_bg"></div>\
                                 <a href="https://rawg.io/games/'+deus_results[i].slug+'" target="_blank" class="game_link"> \
@@ -54,8 +53,7 @@ function do_the_deus_magic(array_genres, platform,today_timestamp, oldest_timest
                                     <i class="fas fa-long-arrow-alt-right deus_see_more" title="Plus d\'informations sur le jeu"></i>\
                                 </a> \
                             </a>\
-                            </div>\
-                        </div>');
+                            </div>');
                         i_displayed++;
                     }
                 }
