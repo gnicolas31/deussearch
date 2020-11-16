@@ -36,6 +36,7 @@ $i18n->index->last_results->title = "Lasts results";
 $i18n->index->last_results->blue_title = "Video games from the latest personality test results ";
 $i18n->index->last_results->notice = "You too take the test and discover video games adapted to your personality! ";
 $i18n->index->last_results->button = "I want to do the test !";
+$i18n->index->last_results->link_titles =" Know more about";
 $i18n->index->deus_button_to_test_title = "Do my personnality test !";
 
 // DEUS FORM
@@ -73,6 +74,9 @@ $i18n->deus_search->form_error_genres = 'Answer all the questions on the form';
 // DEUS RESULTS
 ///////
 $i18n->deus_results->share = "Share my results !"; 
+$i18n->deus_results->sharemessage = "I just did my test, come and see my results and do your own test !";
+$i18n->deus_results->sharemessagetw = "Video games that suits me are just here !';
+
 $i18n->deus_results->title = 'Deus Search results';
 $i18n->deus_results->decouverte = 'Discovery';
 $i18n->deus_results->notice = "This personality study is based on the Big Five format <br /> and takes the format of 10 items, reduced to 8, following the model established by Jason VandenBerghe. <br />DeusSearch establishes a weighting of the data that the user has entered to compare it to his database.";

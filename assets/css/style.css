@@ -2278,6 +2278,7 @@ svg {
 .deus_index_row_games>div {
   flex-basis: 250px;
   text-align: center;
+  background-position: center !important;
   flex-grow: 0;
   flex-shrink: 0;
   background-size: cover !important;
@@ -2336,6 +2337,17 @@ svg {
   display: flex;
   flex-direction: column-reverse;
   position: relative;
+}
+
+.deus_sharebottom {
+  background:   #171744;
+  padding: 15px;
+  border-left: 2px solid  #216a21;
+  margin-bottom: 1em;
+}
+
+.deus_sharebottom .blog-social {
+  margin-bottom:0;
 }
 
 .deus_result h3 {

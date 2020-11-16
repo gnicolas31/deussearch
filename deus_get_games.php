@@ -3,6 +3,7 @@ include('connect.php');
 
 $total_rating_count = $_POST['total_rating_count'];
 $genres = $_POST['genres'];
+
 $recent_date = $_POST['recent_date'];
 $oldest_date = $_POST['oldest_date'];
 $platform = $_POST['platform'];
