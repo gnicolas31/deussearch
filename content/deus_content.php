@@ -136,7 +136,7 @@
                                 </div>
                             </div>
                             <br />
-                            <p class="text-left deus_info"  data-i18n="deus_form_notice_preform"> <?php echo $i18n->deus_search->text; ?></p> <br />
+                            <p class="text-left deus_info" > <?php echo $i18n->deus_search->text; ?></p> <br />
                         </div>
                     </form>	   
                 </div>

@@ -270,8 +270,9 @@
                                                     $url_to_share = "https://www.deussearch.fr/en/deus_results.php?id=".$unic_id_save;
                                                 }
                                             ?>
-                                            <li><a href="#0" class="fb-share-button" onclick="share_fb('<?php echo $url_to_share; ?>');return false;" rel="nofollow" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a target="_blank" title="<?php echo $i18n->deus_results->sharelinktitle; ?>" href="<?php echo $url_to_share; ?>"> <i class="fas fa-link"></i> </a></li>
+                                            <li><a href="#0" title="<?php echo $i18n->deus_results->share; ?>" class="fb-share-button" onclick="share_fb('<?php echo $url_to_share; ?>', '<?php echo $i18n->deus_results->sharemessage; ?>');return false;" rel="nofollow" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                            <li><a target="_blank" title="" href="<?php echo $url_to_share; ?>"> <i class="fas fa-link"></i> </a></li>
+                                            <li> <a target="_blank" title="<?php echo $i18n->deus_results->share; ?>" class="twitter-share-button" href="https://twitter.com/intent/tweet?hashtags=gamers,games,geek,deussearch&text=<?php echo $i18n->deus_results->sharemessagetw; ?>&url=<?php echo $url_to_share; ?> #videogames #gaming #games"> <i class="fab fa-twitter"></i></a> </li>
                                         </ul>
                                     </section>
                                 </div>
@@ -359,6 +360,20 @@
                                         </script>
                                     </row>
                                 </section>
+                                <div class="col-lg-12 deus_meta_infos text-left deus_result_social  deus_sharebottom">
+                                    <span> <?php echo $i18n->deus_results->share; ?></span>    
+                                    <ul class="blog-social">
+                                        <?php 
+                                            $url_to_share = "https://www.deussearch.fr/deus_results.php?id=".$unic_id_save;
+                                            if($lang != 'fr') {
+                                                $url_to_share = "https://www.deussearch.fr/en/deus_results.php?id=".$unic_id_save;
+                                            }
+                                        ?>
+                                        <li><a href="#0" title="<?php echo $i18n->deus_results->share; ?>" class="fb-share-button" onclick="share_fb('<?php echo $url_to_share; ?>', '<?php echo $i18n->deus_results->sharemessage; ?>');return false;" rel="nofollow" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a target="_blank" title="" href="<?php echo $url_to_share; ?>"> <i class="fas fa-link"></i> </a></li>
+                                        <li> <a target="_blank" title="<?php echo $i18n->deus_results->share; ?>" class="twitter-share-button" href="https://twitter.com/intent/tweet?hashtags=gamers,games,geek,deussearch&text=<?php echo $i18n->deus_results->sharemessagetw; ?>&url=<?php echo $url_to_share; ?> #videogames #gaming #games"> <i class="fab fa-twitter"></i></a> </li>
+                                    </ul>
+                                </div>
                                 <span class="text-left deus_notice deus_info"><?php echo $i18n->deus_results->notice; ?>
                                 </span>
                             </div>

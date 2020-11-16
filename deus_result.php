@@ -1,8 +1,6 @@
 <?php 
     $class_page = "deus";
-    if($_GET['id']) {
-        $title = "Deus Search - Résultats du test";
-    }
+    $title = "Deus Search - Résultats du test";
     $lang = "fr";
     include 'connect.php';
     include 'header.php';

@@ -24,7 +24,7 @@
     <meta property="og:site_name" content="Deus Search" />
     <meta property="og:type"       content="website" />
     <meta property="og:description" content="<?php echo $i18n->general->description; ?>" />
-    <meta property="og:image" content="https://deussearch.fr/assets/images/banner/banner.png" />
+    <meta property="og:image" content="https://deussearch.fr/assets/images/banner/share.png" />
 
     <meta name="theme-color" content="#171744" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
