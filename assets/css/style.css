@@ -2858,3 +2858,7 @@ a {
 .deus_result_social {
   display: block;
 }
+
+.contact-form .col-lg-12 {
+  margin-bottom: 1em;
+}
