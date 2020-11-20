@@ -101,13 +101,13 @@ $('#deus_form').submit(function () {
     var agreabilite_val_1 = $('input[name=agreabilite_val_1]:checked').val();
     var agreabilite_val_2 = $('input[name=agreabilite_val_2]:checked').val();
     var platform = $('#platform').val();
-    if(extra_val_1 === undefined || extra_val_2 === undefined || conscencieux_val_1 === undefined || conscencieux_val_2 === undefined || ouverture_val_1 === undefined || ouverture_val_2 === undefined || agreabilite_val_1 === undefined || agreabilite_val_2 === undefined) {
-        $('.deus_issue').show();
-        $('.deus_issue').append('<span><?php echo $i18n->deus_search->form_error_genres; ?>  </span><br />');
-        if(platform != '') {
-            return false;
-        }
-    }
+   // if(extra_val_1 === undefined || extra_val_2 === undefined || conscencieux_val_1 === undefined || conscencieux_val_2 === undefined || ouverture_val_1 === undefined || ouverture_val_2 === undefined || agreabilite_val_1 === undefined || agreabilite_val_2 === undefined) {
+    //    $('.deus_issue').show();
+    //    $('.deus_issue').append('<span><?php echo $i18n->deus_search->form_error_genres; ?>  </span><br />');
+    //    if(platform != '') {
+    //        return false;
+    //    }
+   // }
 
     if(platform == '') {
         $('.deus_issue').show();

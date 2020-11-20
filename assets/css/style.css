@@ -2249,7 +2249,7 @@ svg {
   flex-flow:column;
 }
 
-.deus_index_row_games {
+.deus_index_row_games, .deus_result_titles+div {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
@@ -2705,7 +2705,11 @@ span, li, h1, h1 > a, h2, h2 > a, h3, h3 > a, h4, h4 > a, h5, h5 > a, h6, h6 > a
 
 .deus_meta_infos {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+}
+.deus_meta_infos > div {
+  flex-basis: 250px;
 }
 
 #searchsimpleform {
@@ -2812,7 +2816,7 @@ a {
   justify-content: space-evenly;
 }
 .deus_result_titles+div>div{
-  flex-basis: 250px;
+  flex-basis: 240px;
   margin-bottom: 1em;
   flex-shrink: 0;
 }
@@ -2861,4 +2865,9 @@ a {
 
 .contact-form .col-lg-12 {
   margin-bottom: 1em;
+}
+
+
+#regiration_form fieldset:not(:first-of-type) {
+  display: none;
 }

@@ -133,34 +133,37 @@ $get_a_search_r = $conn->query($get_a_search_c);
                                 </script>
                                 <section class="col-lg-12">
                                     <h3 class="text-left deus_result_titles">  <?php echo $i18n->deus_results->lastthreeyears; ?></h3> 
-                                    <row class="row col-lg-12" id="thisyear">
+                                    <div class="row col-lg-12" id="thisyear">
                                         <script>
                                             window.addEventListener("DOMContentLoaded", (event) => {
                                                 do_the_deus_magic("<?php echo $genres_inclus_string; ?>", <?php echo $id_platform; ?>,  <?php echo $today_timestamp; ?>,   1483228800 ,'thisyear', 6, "<?php echo $keywords; ?>", "<?php echo $_GET['id']; ?>", '<?php echo $cssandjsurlfix; ?>');
                                             });
                                         </script>
-                                    </row>
+                                    </div>
                                 </section>
                                 <section class="col-lg-12">
                                     <h3 class="text-left deus_result_titles"> <?php echo $i18n->deus_results->threetofiveyears; ?> </h3> 
-                                    <row class="row col-lg-12" id="threetosevenyears">
+                                    <div class="row" id="threetosevenyears">
                                         <script>
                                             window.addEventListener("DOMContentLoaded", (event) => {
                                                 do_the_deus_magic("<?php echo $genres_inclus_string; ?>", <?php echo $id_platform; ?>,  1483228800  , 1451606400 ,'threetosevenyears', 3, "<?php echo $keywords; ?>", "<?php echo $_GET['id']; ?>", '<?php echo $cssandjsurlfix; ?>');
                                             });
                                         </script>
-                                    </row>
+                                    </div>
                                 </section>
                                 <section  class="col-lg-12">
                                     <h3 class="text-left deus_result_titles"> <?php echo $i18n->deus_results->fivetotenyears; ?>  </h3> 
-                                    <row class="row col-lg-12" id="morethansevenyears">
+                                    <div class="row col-lg-12" id="morethansevenyears">
                                         <script>
                                             window.addEventListener("DOMContentLoaded", (event) => {
                                                 do_the_deus_magic("<?php echo $genres_inclus_string; ?>", <?php echo $id_platform; ?>,1356998400 , 1104537600  ,'morethansevenyears',3, "<?php echo $keywords; ?>", "<?php echo $_GET['id']; ?>", '<?php echo $cssandjsurlfix; ?>');
                                             });
                                         </script>
-                                    </row>
+                                    </div>
                                 </section>
+                               
+                                <span class="text-left deus_notice deus_info"><?php echo $i18n->deus_results->notice; ?>
+                                </span>
                                 <?php
                                 }
                                 ?>
