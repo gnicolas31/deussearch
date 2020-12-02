@@ -6,7 +6,7 @@
         include('languages/en.php');
     }
 ?>
-<html lang="<?php echo $language; ?>" dir="ltr">
+<html lang="<?php echo $lang; ?>" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +16,7 @@
     <!-- favicon -->
     <link rel="shortcut icon" href="<?php echo $cssandjsurlfix; ?>assets/images/banner/fav.png" type="image/x-icon">
     <!-- responsive css link -->
-    <link rel="stylesheet" href="<?php echo $cssandjsurlfix; ?>assets/css/style.min.css">
+    <link rel="stylesheet" href="<?php echo $cssandjsurlfix; ?>assets/css/style.css">
     <link rel="stylesheet" href="<?php echo $cssandjsurlfix; ?>assets/css/responsive.css">
 
 
@@ -24,7 +24,7 @@
     <meta property="og:site_name" content="Deus Search" />
     <meta property="og:type"       content="website" />
     <meta property="og:description" content="<?php echo $i18n->general->description; ?>" />
-    <meta property="og:image" content="https://deussearch.fr/assets/images/banner/share.png" />
+    <meta property="og:image" content="https://deussearch.fr/assets/images/banner/share_new.png" />
 
     <meta name="theme-color" content="#171744" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -62,7 +62,7 @@
                 <div class="container">
                     <div class="header-top-content d-flex flex-wrap align-items-center justify-content-between">
                         <div class="header-logo">
-                            <a class="site-logo site-title" href="index.php"><img src="<?php echo $cssandjsurlfix; ?>assets/images/banner/logo.png" alt="site-logo"></a>
+                            <a class="site-logo site-title" href="./"><img src="<?php echo $cssandjsurlfix; ?>assets/images/banner/logo.png" alt="site-logo"></a>
                             <p class="deus_subtitle"> <?php echo $i18n->general->subtitle; ?> </p>
                         </div>
                         <div class="header-right d-flex flex-wrap align-items-center">
@@ -93,27 +93,16 @@
             <div class="header-bottom">
                 <div class="container">
                     <nav class="navbar navbar-expand-lg">
-                        <a class="site-logo site-title d-lg-none" href="index.php"><img src="<?php echo $cssandjsurlfix; ?>assets/images/banner/logo.png" alt="site-logo"></a>
+                        <a class="site-logo site-title d-lg-none" href="./"><img src="<?php echo $cssandjsurlfix; ?>assets/images/banner/logo.png" alt="site-logo"></a>
                         <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="fas fa-bars"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav main-menu">
-                                <li active_meta="home"><a href="index.php"><?php echo $i18n->menu->accueil; ?></a></li>
-                                <li class="deus_class" active_meta="deus"><a href="deus.php"><?php echo $i18n->menu->deus; ?></a></li>
-                                <!-- <li class="menu_has_children"><a href="#0">Les jeux</a>  
-                                    <ul class="sub-menu">
-                                        <li><a href="#">Par catégories</a></li>
-                                        <li><a href="#">Par consoles</a></li>
-                                        <li active_meta="deus"><a href="#">Deus Search </a></li>
-                                    </ul>
-                                <li class="menu_has_children"><a href="#">Blog</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="#">Articles</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#0">A propos</a></li> -->
-                                <li active_meta="contact"><a href="contact.php"><?php echo $i18n->menu->contact; ?></a></li>
+                                <li active_meta="home"><a href="./"><?php echo $i18n->menu->accueil; ?></a></li>
+                                <li class="deus_class" active_meta="deus"><a href="deus"><?php echo $i18n->menu->deus; ?></a></li>
+                                <li active_meta="presentation"><a href="presentation"><?php echo $i18n->menu->presentation; ?></a></li>
+                                <li active_meta="contact"><a href="contact"><?php echo $i18n->menu->contact; ?></a></li>
                             </ul>                 
                         </div>
                         <div class="header-search-bar">

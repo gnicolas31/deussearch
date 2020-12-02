@@ -1,6 +1,6 @@
 <?php 
     $class_page = "deus";
-    $title = "Test de personnalité Deus Search - Trouvez des jeux vidéos";
+    $title = "Test de personnalité Deus Search - Trouvez des jeux vidéo";
     $lang = "fr";
     $cssandjsurlfix = "";
     include 'header.php';

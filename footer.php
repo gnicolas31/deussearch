@@ -62,8 +62,6 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="footer-content">
-                      </div>
                     <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center">
                         <div class="footer-logo">
                             <a href="#0"><img src="<?php echo $cssandjsurlfix; ?>assets/images/banner/logo.png" alt="logo"></a>
@@ -73,8 +71,12 @@
                     </div>
                     <div class="copyright-area d-flex flex-wrap justify-content-between">
                         <div class="copyright-content">
-                            <p>V0.9.3 - Copyright © <?php echo date(Y); ?>.<span>All Rights Reserved By </span><a href="#">DeusSearch</a></p>
+                            <p>V0.9.9 - Copyright © <?php echo date(Y); ?>.<span>All Rights Reserved By </span><a href="#">DeusSearch</a></p>
                         </div>
+                        <ul class="blog-social">
+                            <li><a href="https://www.facebook.com/DeusSearch" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="https://twitter.com/DeusSearch" target="_blank" class="active"><i class="fab fa-twitter"></i></a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -101,13 +103,13 @@ $('#deus_form').submit(function () {
     var agreabilite_val_1 = $('input[name=agreabilite_val_1]:checked').val();
     var agreabilite_val_2 = $('input[name=agreabilite_val_2]:checked').val();
     var platform = $('#platform').val();
-    if(extra_val_1 === undefined || extra_val_2 === undefined || conscencieux_val_1 === undefined || conscencieux_val_2 === undefined || ouverture_val_1 === undefined || ouverture_val_2 === undefined || agreabilite_val_1 === undefined || agreabilite_val_2 === undefined) {
-        $('.deus_issue').show();
-        $('.deus_issue').append('<span><?php echo $i18n->deus_search->form_error_genres; ?>  </span><br />');
-        if(platform != '') {
-            return false;
-        }
-    }
+   // if(extra_val_1 === undefined || extra_val_2 === undefined || conscencieux_val_1 === undefined || conscencieux_val_2 === undefined || ouverture_val_1 === undefined || ouverture_val_2 === undefined || agreabilite_val_1 === undefined || agreabilite_val_2 === undefined) {
+    //    $('.deus_issue').show();
+    //    $('.deus_issue').append('<span><?php echo $i18n->deus_search->form_error_genres; ?>  </span><br />');
+    //    if(platform != '') {
+    //        return false;
+    //    }
+   // }
 
     if(platform == '') {
         $('.deus_issue').show();
@@ -123,6 +125,7 @@ $('#deus_form').submit(function () {
 <script src="<?php echo $cssandjsurlfix; ?>assets/js/jquery-migrate-3.0.0.js"></script>
 <!-- bootstrap js -->
 <script src="<?php echo $cssandjsurlfix; ?>assets/js/bootstrap.min.js"></script>
+<script src="<?php echo $cssandjsurlfix; ?>assets/js/multistepform.js"></script>
 <!-- nice-select js-->
 <script src="<?php echo $cssandjsurlfix; ?>assets/js/jquery.nice-select.js"></script>
 <!-- wow js file -->

@@ -37,23 +37,23 @@
                             ?>
                                 <form class="contact-form" action="contact.php" method="get">
                                     <div class="row">
-                                        <div class="col-lg-12 form-group text-left">
+                                        <div class="col-lg-12 form-group text-left wow fadeIn" data-wow-delay="0.1s">
                                             <label ><?php echo $i18n->contact->form->label->nom; ?><span>*</span></label>
                                             <input type="text" name="name" required placeholder="<?php echo $i18n->contact->form->placeholder->nom; ?>">
                                         </div>
-                                        <div class="col-lg-12 form-group text-left">
+                                        <div class="col-lg-12 form-group text-left wow fadeIn" data-wow-delay="0.1s">
                                             <label ><?php echo $i18n->contact->form->label->email; ?><span>*</span></label>
                                             <input type="email" name="email" required placeholder="<?php echo $i18n->contact->form->placeholder->email; ?>">
                                         </div>
-                                        <div class="col-lg-12 form-group text-left">
+                                        <div class="col-lg-12 form-group text-left wow fadeIn" data-wow-delay="0.1s">
                                             <label ><?php echo $i18n->contact->form->label->sujet; ?> <span>*</span></label>
                                             <input type="text" name="subject" required placeholder="<?php echo $i18n->contact->form->placeholder->sujet; ?>">
                                         </div>
-                                        <div class="col-lg-12 form-group text-left">
+                                        <div class="col-lg-12 form-group text-left wow fadeIn" data-wow-delay="0.1s">
                                             <label ><?php echo $i18n->contact->form->label->message; ?><span>*</span></label>
                                             <textarea required  name="message" placeholder="<?php echo $i18n->contact->form->placeholder->email; ?>"></textarea>
                                         </div>
-                                        <div class="col-lg-12 form-group text-center">
+                                        <div class="col-lg-12 form-group text-center wow fadeIn" data-wow-delay="0.1s">
                                             <input type="submit" class="cmn-btn" value="<?php echo $i18n->contact->form->button; ?>">
                                         </div>
                                     </div>

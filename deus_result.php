@@ -1,5 +1,5 @@
 <?php 
-    $class_page = "deus";
+    $class_page = "deus deus_results_page";
     $title = "Deus Search - Résultats du test";
     $lang = "fr";
     include 'connect.php';
