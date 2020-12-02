@@ -1,9 +1,10 @@
-<?php     include('connect.php');
+<?php       
+    include('../connect.php');
     $numero_page = 1;
     if($_GET['nb']) {
         $numero_page = $_GET['nb']+1;
     }
-    $json = file_get_contents('https://api.rawg.io/api/games?page='.$numero_page.'&page_size=10&key=1a07bf406da8478d952155742cde59ce');
+    $json = file_get_contents('https://api.rawg.io/api/games?page='.$numero_page.'&page_size=40');
     $games = json_decode($json);
     foreach($games->results as $game) {
         $deus_check_if_game_already_exist_request = "SELECT id FROM deus_games WHERE id_rawg = ".$game->id." LIMIT 1";
@@ -37,11 +38,19 @@
             if($game->clip) {
                 $clipurl = $game->clip->clip;
             }
+            echo $clipurl;
             $metacritic = ' ';
             if($game->metacritic) {
                 $metacritic = $game->metacritic;
             }
-            $save_game_in_bdd_req = "INSERT INTO deus_games (id_rawg,slug, game_name, released, rating, rating_count, metacritic, img_url, clip_url) VALUES (".$game->id.",'".$game->slug."', '".$game_name."', '".$date."', '".$game->rating."',".$game->ratings_count.",'".$metacritic."','".$imgurl."','".$clipurl."')";
+
+            $screenshotsurl = '';
+            foreach($game->short_screenshots as $screenshot) {
+                $screenshot_url = $screenshot->image;
+                $screenshotsurl = $screenshotsurl.','.$screenshot_url;
+            }
+            
+            $save_game_in_bdd_req = "INSERT INTO deus_games (id_rawg,slug, game_name, released, rating, rating_count, metacritic, img_url, clip_url,screenshots) VALUES (".$game->id.",'".$game->slug."', '".$game_name."', '".$date."', '".$game->rating."',".$game->ratings_count.",'".$metacritic."','".$imgurl."','".$clipurl."','".substr($screenshotsurl,1)."')";
 
             $save_game_in_bdd = $conn->query($save_game_in_bdd_req); 
             if($save_game_in_bdd == false) {
@@ -49,6 +58,6 @@
             }
         }
     }
-    header('Location: http://localhost/gamefinder/demo/getrawggames.php?nb='.$numero_page);
+    header('Location: http://localhost/deussearch/donotupload/getrawggames.php?nb='.$numero_page);
 
   ?>

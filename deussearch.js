@@ -3,7 +3,7 @@
 /////
 function do_the_deus_magic(array_genres, platform,today_timestamp, oldest_timestamp, dom_elem, limit_tab, keywords, unic_id_ofsave, urlfixer) {
     
-    $('#deus_loader span').text('Filtrage par genres');
+    $('#deus_loader span').text('Patientez quelques instants, on recherche les jeux vidéo qui vous correspondent.');
     $.ajax({
         method: "POST",
         url: urlfixer+"deus_get_games.php",
@@ -21,7 +21,6 @@ function do_the_deus_magic(array_genres, platform,today_timestamp, oldest_timest
                     if(i_displayed < limit_tab) {
                         deus_save_results[i_displayed] = deus_results[i].id;
                         var rating = deus_results[i].rating;
-                        var deus_result_game_id = deus_results[i].id;
                         var genre = '';
                         if(deus_results[i].genres) {
                             genre = deus_results[i].genres[0].name;
@@ -31,26 +30,28 @@ function do_the_deus_magic(array_genres, platform,today_timestamp, oldest_timest
                         var tag_bloc = '';
                         // si rawg alors je prends
                         if(deus_results[i].clip_url.length > 1) {
-                            video_bloc = '<video class="deus_video" id="video_player" loop muted width="250"><source src="'+deus_results[i].clip_url+'" type="video/mp4"> Sorry, your browser doesn\'t support embedded videos.</video>';
+                            video_bloc = '<video class="deus_video" id="video_player" controls loop muted width="250"><source src="'+deus_results[i].clip_url+'" type="video/mp4"> Sorry, your browser doesn\'t support embedded videos.</video>';
                         }
                         if(deus_results[i].num_tags) {
-                            tag_bloc = '<p class="deus_same_val" ><span>'+deus_results[i].num_tags+'</span> préférence(s) </p>';
+                            tag_bloc = '<p class="deus_same_val pb-0" ><span>'+deus_results[i].num_tags+'</span> préférence(s) </p>';
                         }
+                        var id_rawg = deus_results[i].id_rawg;
                         // sinon rien
                         var bg_url = 'background-image:url("'+cover+'");';
-                        $("#"+dom_elem).append('<div class="game-item deus_result" style='+bg_url+' game_id="'+deus_results[i].id+'" id="game"> \
-                            <a class="game_url" target="_blank" href="https://rawg.io/games/'+deus_results[i].slug+'">\
+                        $("#"+dom_elem).append('<div class="game-item deus_result" style='+bg_url+' game_id="'+id_rawg+'"  data-toggle="modal" data-target="#game_modal"  id="game"> \
+                            <a class="game_url">\
                                 <div class="game_deus_bg"></div>\
-                                <a href="https://rawg.io/games/'+deus_results[i].slug+'" target="_blank" class="game_link"> \
+                                <a class="game_link"> \
                                     <div class="game-content"> \
                                         <div class="game-content-body"> \
                                             <h3 class="title">'+deus_results[i].game_name+'</h3>\
-                                            <p class="deus_same_val" ><span>'+deus_results[i].num_genres+'</span> genre(s) </p>\
+                                            <p class="deus_same_val pb-0" ><span>'+deus_results[i].num_genres+'</span> genre(s) </p>\
                                             '+tag_bloc+'\
                                             '+video_bloc+'\
                                         </div> \
                                     </div> \
                                     <i class="fas fa-long-arrow-alt-right deus_see_more" title="Plus d\'informations sur le jeu"></i>\
+                                    <span class="deus_see_more game_rating" title="Note du jeu">' + parseInt(rating*20)+'<i class="fas fa-star"></i> </span>\
                                 </a> \
                             </a>\
                             </div>');
@@ -86,15 +87,112 @@ $(document).ready(function() {
         });
     });
 
-
     // le formulaire deus search
     $('.deus_radio').click(function() {
         $(this).siblings().removeClass('active');
         $(this).addClass('active');
     });
 
+    // limiter le nombre de mots clés
+    var keyw_cloud = 4; // real limit is this number - 1
+    $('.key_cloud_check').on('change', function(evt) {
+    if($('.key_cloud_check:checked').length >= keyw_cloud) {
+        this.checked = false;
+    }
+    });    
+
+
+    /// open game modal on click
+    $('.deus_results_page #game, .home #game').click(function() {
+        var game_id = $(this).attr('game_id');
+
+        $.ajax({
+            method: "GET",
+            url: "https://api.rawg.io/api/games/"+game_id,
+          //  data: "fields name, total_rating, url, id, slug, genres.name, videos.video_id, cover.image_id, websites.url, websites.category ; where platforms = "+platform+"  & genres = ("+array_genres+") & category = 0 & first_release_date <"+today_timestamp+" & first_release_date > "+oldest_timestamp+" "+param_added+"; limit 500; sort "+sort_by+" desc;",
+            success:function( game_info ) {
+                $('#modal_descr i').addClass('fa-plus').removeClass('fa-minus');
+                /* je nettoie toute la modal */
+                $('#game_modal #genres,#game_modal .description, #game_stores, #game_modal #video').empty();
+               
+                $('.modal-content #game_description_modal').removeClass('active');
+                /* header */
+                $('#game_modal .modal-title').text(game_info.name);
+                $('#game_modal .modal_link').attr('href', game_info.website);
+
+                var rating = game_info.rating*20;
+                $('#game_modal #note').text(Math.round( rating ));
+
+                /* body */
+
+                $('#game_modal .modal-body').css("background-image", "url(" + game_info.background_image + ")");
+                for(i_genres = 0; i_genres < game_info.genres.length; i_genres++) {
+                    $('#game_modal #genres').append('<span class="badge badge-primary mr-2">'+game_info.genres[i_genres].name+'</span>');
+                }
+
+                // translate the text
+                var curr_lang = $('html').attr('lang');
+                const data = JSON.stringify({
+                    "q": game_info.description,
+                    "source": "en",
+                    "target": curr_lang
+                });
+                
+                const xhr = new XMLHttpRequest();
+                xhr.withCredentials = true;
+                
+                xhr.addEventListener("readystatechange", function () {
+                    if (this.readyState === this.DONE) {
+                        var descr_translated = JSON.parse(this.responseText);
+                        $('#game_modal .modal-body #game_description_modal').html(descr_translated.data.translations.translatedText);
+                    }
+                });
+                
+                xhr.open("POST", "https://deep-translate1.p.rapidapi.com/language/translate/v2");
+                xhr.setRequestHeader("content-type", "application/json");
+                xhr.setRequestHeader("x-rapidapi-key", "4d829797f8msh43a17d4bae9eaecp1bc4edjsn3331d3d707d0");
+                xhr.setRequestHeader("x-rapidapi-host", "deep-translate1.p.rapidapi.com");
+                
+                xhr.send(data);
+
+                $('#game_modal .modal-body #game_description_modal').html(game_info.description);
+                for(i_link = 0; i_link < game_info.stores.length; i_link++) {
+                    $('#game_modal .modal-body #game_stores').append('<a class="btn mb-1 btn-sm g_link btn-dark" target="_blank" href="'+game_info.stores[i_link].url+' "> '+game_info.stores[i_link].store.name+' </a>');
+                }
+                $('#game_modal .modal-body #game_stores').append('<a class="btn mb-1 btn-sm g_link btn-dark" target="_blank" href="'+game_info.website+'"> Site officiel </a>');
+                
+                if(game_info.clip !== null) {
+                    $('#game_modal .modal-body #video').append('<video controls><source src="'+game_info.clip.clip+'" type="video/mp4"> Sorry, your browser doesn\'t support embedded videos.</video>');
+                    
+                    game_have_video = true;
+                    if(game_info.clip.video !== null) {
+                        $('#game_modal .modal-body #video').append('<iframe width="560" height="315" src="https://www.youtube.com/embed/'+game_info.clip.video+'" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
+                    } 
+                } else {
+                    $('#game_modal .modal-body #video').append(' 0 Media ');
+                }
+
+            }
+        });
+
+    });
+    $('.deus_results_page #game_modal').on('hidden.bs.modal', function (e) {
+        $('#game_modal #video').empty();
+    });
+});
+
+
+
+$('.modal-content #modal_descr').click(function() { 
+    $('.modal-content #game_description_modal').toggleClass('active');
+    if($('.modal-content #game_description_modal').hasClass('active')) {
+        $('#modal_descr i').removeClass('fa-plus').addClass('fa-minus');
+    } else {
+        $('#modal_descr i').addClass('fa-plus').removeClass('fa-minus');
+    }
 });
 
 function share_fb(url,quote) {
     window.open('https://www.facebook.com/sharer/sharer.php?u='+url+'&quote='+quote,'facebook-share-dialog',"width=626, height=436");
 }
+
