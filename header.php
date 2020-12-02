@@ -6,7 +6,7 @@
         include('languages/en.php');
     }
 ?>
-<html lang="<?php echo $language; ?>" dir="ltr">
+<html lang="<?php echo $lang; ?>" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -101,18 +101,7 @@
                             <ul class="navbar-nav main-menu">
                                 <li active_meta="home"><a href="./"><?php echo $i18n->menu->accueil; ?></a></li>
                                 <li class="deus_class" active_meta="deus"><a href="deus"><?php echo $i18n->menu->deus; ?></a></li>
-                                <!-- <li class="menu_has_children"><a href="#0">Les jeux</a>  
-                                    <ul class="sub-menu">
-                                        <li><a href="#">Par catégories</a></li>
-                                        <li><a href="#">Par consoles</a></li>
-                                        <li active_meta="deus"><a href="#">Deus Search </a></li>
-                                    </ul>
-                                <li class="menu_has_children"><a href="#">Blog</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="#">Articles</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#0">A propos</a></li> -->
+                                <li active_meta="presentation"><a href="presentation"><?php echo $i18n->menu->presentation; ?></a></li>
                                 <li active_meta="contact"><a href="contact"><?php echo $i18n->menu->contact; ?></a></li>
                             </ul>                 
                         </div>
