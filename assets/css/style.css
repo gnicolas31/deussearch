@@ -3441,3 +3441,7 @@ padding: 10px;
   display: inline-block !important;
   margin-right: 15px !important;
 }
+
+.blog-header-social {
+  margin-bottom:0;
+}

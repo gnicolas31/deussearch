@@ -1,5 +1,7 @@
 <?php
 
+$i18n = new \stdClass();
+$i18n->menu = new \stdClass();
 // LE MENU 
 //////
 $i18n->menu->accueil = "Accueil";
@@ -9,6 +11,7 @@ $i18n->menu->presentation = "Presentation";
 
 // GENERAL 
 //////
+$i18n->general = new \stdClass();
 $i18n->general->subtitle = "Le 1er moteur de recherche de jeux vidéo en fonction de ta personnalité !";
 $i18n->general->search_placeholder = "Recherche par titre";
 $i18n->general->search_result_holder = "Faîtes une recherche";
@@ -18,6 +21,7 @@ $i18n->general->footer_subtitle = "Notre test de personnalité vous permet de tr
 
 // ACCUEIL 
 //////
+$i18n->index = new \stdClass();
 $i18n->index->main_title = 'Trouve le jeu vidéo qui te correspond';
 $i18n->index->main_subtitle_1 = "En seulement 11 questions, découvre une liste allant jusqu'a 12 jeux vidéo correspondant à ta personnalité parmi les";
 $i18n->index->main_subtitle_2 = " disponibles, c'est rapide efficace et simple !";
@@ -34,6 +38,7 @@ $i18n->index->about_blue_title = "Une recherche unique";
 $i18n->index->about_title = "Découvrez des jeux vidéo adaptés à votre personnalité";
 $i18n->index->about_text = "Notre algorithme trouve le jeux vidéo qui correspond à vos envies et votre matériel et votre personnalité en un rien de temps. <br /><br /> Découvrez des jeux vidéo , autant des triples A comme Red Dead Redemption ou Valorant que des licences moins connues comme Vagrant ou Noita !";
 $i18n->index->about_button = "Je trouve mon jeu";
+$i18n->index->last_results = new \stdClass();
 $i18n->index->last_results->title = " Derniers résultats";
 $i18n->index->last_results->blue_title = "Jeux vidéo issus des derniers résultats du test de personnalité ";
 $i18n->index->last_results->notice = "Vous aussi faîtes votre test et découvrez des jeux vidéo adaptés à votre personnalité ! ";
@@ -43,6 +48,8 @@ $i18n->index->deus_button_to_test_title = "Faire mon test de personnalité";
 
 // DEUS FORM
 //////
+$i18n->deus_search = new \stdClass();
+$i18n->deus_search->platform = new \stdClass();
 $i18n->deus_search->platform->pc = 'Ordinateur';
 $i18n->deus_search->title = 'Test de personnalité Deus Search';
 $i18n->deus_search->text = "Ce questionnaire de 11 questions permettra de définir ta personnalité et te proposera une liste allant jusqu'a 12 jeux vidéo adaptés.";
@@ -69,21 +76,26 @@ $i18n->deus_search->keyword_8 = "Sombre";
 $i18n->deus_search->keyword_9 = "Infiltration";
 $i18n->deus_search->notice = "La réponse opposé à la votre peux être proposée, c'est juste une préférence.";
 $i18n->deus_search->button = "Envoyer";
+$i18n->deus_search->answer = new \stdClass();
+$i18n->deus_search->answer->select = new \stdClass();
 $i18n->deus_search->answer->select->holder = "Cliquer pour dérouler";
 $i18n->deus_search->answer->agree_x = "Totalement d'accord";
 $i18n->deus_search->answer->agree = "Plutôt d'accord";
 $i18n->deus_search->answer->neutral = "Neutre";
 $i18n->deus_search->answer->disagree_x = "Pas du tout d'accord";
 $i18n->deus_search->answer->disagree = "Plutôt pas d'accord";
+$i18n->deus_search->answer->mode = new \stdClass();
 $i18n->deus_search->answer->mode->solo = "Solo";
 $i18n->deus_search->answer->mode->neutral = "Les deux me vont";
 $i18n->deus_search->answer->mode->multi = "Multijoueur";
+$i18n->deus_search->answer->atout = new \stdClass();
 $i18n->deus_search->answer->atout->story = "L'histoire";
 $i18n->deus_search->answer->atout->neutral = "Aucune préférence";
 $i18n->deus_search->answer->atout->sound = "La bande-son";
 $i18n->deus_search->form_error_platform = 'Renseignes une plateforme !';
 $i18n->deus_search->form_error_genres = 'Répondez à toutes les questions du formulaire';
 
+$i18n->deus_search->steps = new \stdClass();
 $i18n->deus_search->steps->prev = 'Précédent';
 $i18n->deus_search->steps->next = 'Suivant';
 $i18n->deus_search->steps->step = 'Etape';
@@ -96,6 +108,7 @@ $i18n->deus_search->steps->step4 = 'Specificités';
 
 // DEUS RESULTS
 ///////
+$i18n->deus_results = new \stdClass();
 $i18n->deus_results->share = "Je partage mes résultats"; 
 $i18n->deus_results->sharemessage = "Je viens de faire mon test, viens voir mes résultats et fais le tiens !";
 $i18n->deus_results->sharemessagetw = "Les jeux qui me correspondent sont ici ! ";
@@ -112,6 +125,7 @@ $i18n->deus_results->profile = 'Votre profil';
 $i18n->deus_results->lastthreeyears = "Sortis ces 3 dernières années";
 $i18n->deus_results->threetofiveyears = "Sortis il y a 3 à 5 ans";
 $i18n->deus_results->fivetotenyears = "Sortis il y a 5 à 10 ans";
+$i18n->deus_results->modal = new \stdClass();
 $i18n->deus_results->modal->website_link = "Site officiel";
 $i18n->deus_results->modal->note_title = "Note du jeu";
 $i18n->deus_results->modal->available_title = "Disponible ici !";
@@ -121,10 +135,12 @@ $i18n->deus_results->modal->videos_title = "Vidéos";
 
 // DEUS RESULTS OF OTHERS
 ///////
+$i18n->deus_results_others = new \stdClass();
 $i18n->deus_results_others->notice = "Vous êtes actuellement ent rain de visualiser les résultats de quelqu'un d'autre.";
 
 // CONTACT 
 //////
+$i18n->contact = new \stdClass();
 $i18n->contact->main_title = "Nous contacter";
 $i18n->contact->blue_title = "Besoin d'aide ?";
 $i18n->contact->sub_title = "Contactez-nous !";
@@ -132,11 +148,14 @@ $i18n->contact->text = "Nous répondons rapidement et serons ravis de traiter ta
 
     // FORMULAIRE 
     //////
+    $i18n->contact->form = new \stdClass();
+    $i18n->contact->form->label = new \stdClass();
     $i18n->contact->form->label->nom = "Nom de contact";
     $i18n->contact->form->label->email = "E-mail";
     $i18n->contact->form->label->sujet = "Sujet";
     $i18n->contact->form->label->message = "Message";
 
+    $i18n->contact->form->placeholder = new \stdClass();
     $i18n->contact->form->placeholder->nom = "Ex : Vincent Delprat, ..";
     $i18n->contact->form->placeholder->email = "Ex : exemple@mail.fr";
     $i18n->contact->form->placeholder->sujet = "Sujet du message";
@@ -146,11 +165,12 @@ $i18n->contact->text = "Nous répondons rapidement et serons ravis de traiter ta
 
 // PRESENTATION
 //////
+$i18n->presentation = new \stdClass();
 $i18n->presentation->main_title = "Presentation de DeusSearch";
 
 $i18n->presentation->title = "DeusSearch : Trouve ton jeu vidéo via un test de personnalité avéré ! ";
 $i18n->presentation->p1 = "Tu viens de finir ton jeu vidéo ? Tu l’as kiffé mais maintenant tu ne sais plus à quoi jouer ? Alors prend quelques minutes pour <b>faire notre test de personnalité concocté spécialement pour nos amis gamers ! </b>Ça t’évitera de perdre ton temps dans la rubrique des jeux du moment sur je ne sais quel site.";
-$i18n->presentation->p2 = "Et vu qu’on se fou pas de ta gueule, on a spécialement <b>créé un algorithme pour te proposer les jeux vidéo qui te correspondent vraiment</b>, basé sur le format du Big Five. En gros, c’est un repère psychologique pour la description et l’étude de la personnalité qui est utilisé fréquemment, par exemple pour des recrutements. Si t’es vraiment curieux, on t’a rédigé un article qui parle de tout ça plus en détail, c’est par ici : Le Big Five : les 5 grands facteurs de la personnalité. ";
+$i18n->presentation->p2 = "Et vu qu’on se fout pas de ta gueule, on a spécialement <b>créé un algorithme pour te proposer les jeux vidéo qui te correspondent vraiment</b>, basé sur le format du Big Five. En gros, c’est un repère psychologique pour la description et l’étude de la personnalité qui est utilisé fréquemment, par exemple pour des recrutements.";
 $i18n->presentation->p3 = "Pour découvrir de nouveaux jeux vidéo, il suffit de répondre à 10 affirmations très simples où il te faudra préciser ton niveau d’accord ou pas avec celles-ci. (Mythonnez pas les gars, on ne va pas vous juger, promis). Afin de ne pas tout mélanger, on triera les jeux en fonction de ce que t’as comme matos (Switch, PS4, Xbox One, Ordi et MacOs).";
 $i18n->presentation->p4 = "Après, tu découvres <b>ton profil catégorisé en quatre grandes parties :</b>";
 $i18n->presentation->p5 = "Pour chaque catégorie, une note sera attribuée allant de 0 à 5 en fonction de ce que tu as répondu précédemment. Selon ton profil, un ou plusieurs genres de jeux vidéo seront alors recommandés (aventure, stratégie, arcade, racing…), Ce qui n’exclut pas pour autant que d’autre genre de jeux vidéo apparaissent. <b>Les jeux vidéo proposés seront donc ceux qui colleront le plus à ta personnalité ! </b>";
