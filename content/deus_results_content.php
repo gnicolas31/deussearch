@@ -104,7 +104,10 @@
                                                 ///////
                                                 $id_platform = $_POST['platform'];
                                                 $array_themes = $_POST['themes'];
-
+                                                $nouveaute_reference = 4;
+                                                $challenge_reference = 0;
+                                                $stimulation_reference = 0;
+                                                $harmonie_reference = 0;
                                             // SELECTION DE TOUS LES GENRES EN VUE DU CALCUL DU COEFFICIENT DE CHACUNS COMPARE AUX DONNEES DE REFERENCE
                                             /////
                                                 // INITIALISATIONS DES DONNEES AVANT LA BOUCLE

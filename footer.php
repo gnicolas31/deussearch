@@ -120,7 +120,7 @@ $('#deus_form').submit(function () {
 </script>
 
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-<script src="<?php echo $cssandjsurlfix; ?>deussearch.js"></script>
+<script src="<?php echo $cssandjsurlfix; ?>deussearch.min.js"></script>
 <!-- migarate-jquery -->
 <script src="<?php echo $cssandjsurlfix; ?>assets/js/jquery-migrate-3.0.0.js"></script>
 <!-- bootstrap js -->
