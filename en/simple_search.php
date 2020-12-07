@@ -14,14 +14,7 @@ echo '<ul>';
 while ($simple_result = mysqli_fetch_array($simple_search_result)) {
       echo '<li> <a target="_blank" href="https://rawg.io/games/'.$simple_result['slug'].'">'.$simple_result['game_name'].'</a></li>';
 }
-
-if($lang == 'fr') { 
-      $deus_test_url = 'test-de-personnalite-trouver-jeu-video';
-} else {
-      $deus_test_url = 'personnality-test-find-video-games';
-} 
-
-echo '<li class="deus_result_simple" > <a target="_blank" href="'.$deus_test_url.'"> Deus Search test </a></li>';
+echo '<li class="deus_result_simple" > <a target="_blank" href="personnality-test-find-video-game"> Deus Search test </a></li>';
 echo '</ul>';
 
 ?>

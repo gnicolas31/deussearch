@@ -1,5 +1,5 @@
   <!-- banner-section start -->
-  <section class="banner-section bg bg_img" data-background="<?php echo $cssandjsurlfix; ?>assets/images/banner/banner.png">
+  <section style="overflow:visible"class=" pb-2 banner-section bg bg_img" data-background="<?php echo $cssandjsurlfix; ?>assets/images/banner/banner.png">
         <div class="banner-element-one my-paroller" data-paroller-factor="0.1" data-paroller-type="foreground" data-paroller-direction="horizontal">
             <img src="<?php echo $cssandjsurlfix; ?>assets/images/banner/ship1.png" alt="element">
         </div>
@@ -70,7 +70,17 @@
                             <a href="./deus" title="<?php echo $i18n->index->deus_button_to_test_title; ?>" class="cmn-btn"><?php echo $i18n->index->deus_button1; ?><i class="fas fa-long-arrow-alt-right"></i></a>
                         </div>
                     </div>
+                    <div class="container deus_notice deus_banniere_home mb-2">
+                    <h2>   
+                        JEU CONCOURS DU 15/12 AU 31/12
+                    </h2>
+                    <p>
+                        2 licences <a target="_blank" href="https://store.steampowered.com/app/1145360/">Hadès</a> à gagner ce mois-ci sur la plateforme de votre choix en participant aux concours sur les réseaux sociaux !
+                    </p>
+                    <a class="social" href="https://www.facebook.com/DeusSearch" target="_blank" title="DeusSearch sur Facebook"><i class="fab fa-facebook-f"></i></a>
                 </div>
+                </div>
+              
             </div>
         </div>
     </section>
@@ -193,37 +203,22 @@
         <div class="about-element-ten">
             <img src="<?php echo $cssandjsurlfix; ?>assets/images/about/icon-9.png" alt="icon">
         </div>
+      
+        <script src="https://embed.twitch.tv/embed/v1.js"></script>
         <div class="container deus_list_index">
-                <h2> Jeux partenaires </h2>
-                <h3>Découvrez ici des jeux de qualité développés par nos partenaires</h3>
-                <div class="deus_index_row_games">
-                    <?php 
-                        $index_videogames_construct = "SELECT game_name, slug, clip_url, img_url, id_rawg FROM deus_games WHERE id = 171315 LIMIT 4";
-                        $index_videogames_r = $conn->query($index_videogames_construct);
-                        while($index_videogames = mysqli_fetch_array($index_videogames_r)) {
-                            ?>
-                            <div class="game-item deus_result" data-toggle="modal" data-target="#game_modal"  game_id="<?php echo $index_videogames['id_rawg']; ?>"  id="game" style='background:url("<?php echo $index_videogames['img_url']; ?>")' game_id="<?php echo $index_videogames['id_rawg']; ?>"> 
-                                <a title="<?php echo $i18n->index->last_results->link_titles.' '.$index_videogames['game_name']; ?>"" class="game_url"">
-                                    <div class="game_deus_bg"></div>
-                                    <a title="<?php echo $i18n->index->last_results->link_titles.' '.$index_videogames['game_name']; ?>" class="game_link"> 
-                                        <div class="game-content"> 
-                                            <div class="game-content-body"> 
-                                                <h4 class="title"> <?php echo $index_videogames['game_name']; ?></h4>
-                                                <video class="deus_video" id="video_player" loop muted width="250"><source src="<?php echo $index_videogames['clip_url']; ?>" type="video/mp4"> Sorry, your browser doesn\'t support embedded videos.</video>                                    </div> 
-                                        </div> 
-                                    </a> 
-                                </a>
-                            </div>
-                            <?php 
-                        }
-                    ?>
-                    
+                <h2> <?php echo $i18n->index->streamer_title; ?> </h2>
+                <h3> <?php echo $i18n->index->streamer_text; ?>  </h3>
+                <div class="row">
+                    <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+                    <div id="twitch-embed" class="twitch_embed"></div>
+                    <script type="text/javascript">
+                    new Twitch.Embed("twitch-embed", {
+                        width: 854,
+                        height: 480,
+                        channel: "maaedra"
+                    });
+                    </script>
                 </div>
-                <div class="about-content-btn">
-                    <p>  <?php echo $i18n->index->last_results->notice; ?></p>
-                    <a href="./deus" class="cmn-btn"  title="<?php echo $i18n->index->deus_button_to_test_title; ?>"> <?php echo $i18n->index->last_results->button; ?><i class="fas fa-long-arrow-alt-right"></i></a>
-                </div>
-            </div>
         </div>
         <div class="container deus_list_index">
                 <h2> <?php echo $i18n->index->last_results->title; ?></h2>
@@ -241,7 +236,7 @@
                                         <div class="game-content"> 
                                             <div class="game-content-body"> 
                                                 <h4 class="title"> <?php echo $index_videogames['game_name']; ?></h4>
-                                                <video class="deus_video" id="video_player" loop muted width="250"><source src="<?php echo $index_videogames['clip_url']; ?>" type="video/mp4"> Sorry, your browser doesn\'t support embedded videos.</video>                                    </div> 
+                                            </div> 
                                         </div> 
                                     </a> 
                                 </a>
