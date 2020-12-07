@@ -3441,3 +3441,38 @@ padding: 10px;
   display: inline-block !important;
   margin-right: 15px !important;
 }
+
+.blog-header-social {
+  margin-bottom:0;
+}
+
+.deus_banniere_home {
+  z-index: 999;
+  background: rgba(104, 104, 41, 0.5);
+  padding: 15px;
+  border: 2px dashed rgb(217, 217, 174);
+}
+
+.deus_banniere_home h2 {
+  color: #eee;
+}
+
+.deus_banniere_home p {
+  padding: 20px;
+  border-left: 3px solid aliceblue;
+  margin-top: 33px;
+}
+
+.deus_banniere_home a.social {
+  font-size: 2em;
+}
+
+.deus_banniere_home a.social i {    
+  color: white;
+}
+
+.twitch_embed {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3em;
+}

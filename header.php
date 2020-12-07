@@ -16,7 +16,7 @@
     <!-- favicon -->
     <link rel="shortcut icon" href="<?php echo $cssandjsurlfix; ?>assets/images/banner/fav.png" type="image/x-icon">
     <!-- responsive css link -->
-    <link rel="stylesheet" href="<?php echo $cssandjsurlfix; ?>assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo $cssandjsurlfix; ?>assets/css/style.min.css">
     <link rel="stylesheet" href="<?php echo $cssandjsurlfix; ?>assets/css/responsive.css">
 
 
@@ -66,6 +66,10 @@
                             <p class="deus_subtitle"> <?php echo $i18n->general->subtitle; ?> </p>
                         </div>
                         <div class="header-right d-flex flex-wrap align-items-center">
+                            <ul class="blog-social blog-header-social">
+                                <li><a href="https://www.facebook.com/DeusSearch" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="https://twitter.com/DeusSearch" target="_blank" class="active"><i class="fab fa-twitter"></i></a></li>
+                            </ul>
                             <div class="language-select-list d-flex flex-wrap">
                                 <div class="language-thumb">
                                     <img src="<?php echo $cssandjsurlfix; ?>assets/images/lang.png" alt="language">
@@ -100,7 +104,15 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav main-menu">
                                 <li active_meta="home"><a href="./"><?php echo $i18n->menu->accueil; ?></a></li>
-                                <li class="deus_class" active_meta="deus"><a href="deus"><?php echo $i18n->menu->deus; ?></a></li>
+                                <?php 
+                                if($lang == 'fr') { ?>
+                                    <li class="deus_class" active_meta="deus"><a href="test-de-personnalite-trouver-jeu-video"><?php echo $i18n->menu->deus; ?></a></li>
+                                <?php } else {
+                                ?>
+                                    <li class="deus_class" active_meta="deus"><a href="personnality-test-find-video-games"><?php echo $i18n->menu->deus; ?></a></li>
+                                <?php 
+                                }
+                                ?>
                                 <li active_meta="presentation"><a href="presentation"><?php echo $i18n->menu->presentation; ?></a></li>
                                 <li active_meta="contact"><a href="contact"><?php echo $i18n->menu->contact; ?></a></li>
                             </ul>                 

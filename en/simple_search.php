@@ -14,7 +14,7 @@ echo '<ul>';
 while ($simple_result = mysqli_fetch_array($simple_search_result)) {
       echo '<li> <a target="_blank" href="https://rawg.io/games/'.$simple_result['slug'].'">'.$simple_result['game_name'].'</a></li>';
 }
-echo '<li class="deus_result_simple" > <a target="_blank" href="deus.php"> Deus Search engine </a></li>';
+echo '<li class="deus_result_simple" > <a target="_blank" href="personnality-test-find-video-game"> Deus Search test </a></li>';
 echo '</ul>';
 
 ?>
