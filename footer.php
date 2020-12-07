@@ -71,7 +71,7 @@
                     </div>
                     <div class="copyright-area d-flex flex-wrap justify-content-between">
                         <div class="copyright-content">
-                            <p>V0.9.9 - Copyright © <?php echo date(Y); ?>.<span>All Rights Reserved By </span><a href="#">DeusSearch</a></p>
+                            <p>V1.0.0 - Copyright © <?php echo date(Y); ?>.<span>All Rights Reserved By </span><a href="#">DeusSearch</a></p>
                         </div>
                         <ul class="blog-social">
                             <li><a href="https://www.facebook.com/DeusSearch" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
