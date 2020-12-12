@@ -165,22 +165,4 @@ $i18n->contact->text = "Nous répondons rapidement et serons ravis de traiter ta
     $i18n->contact->form->button = "Envoyer";
     $i18n->contact->form->success = "Le mail a bien été envoyé.";
 
-// PRESENTATION
-//////
-$i18n->presentation = new \stdClass();
-$i18n->presentation->main_title = "Presentation de DeusSearch";
-
-$i18n->presentation->title = "DeusSearch : Trouve ton jeu vidéo via un test de personnalité avéré ! ";
-$i18n->presentation->p1 = "Tu viens de finir ton jeu vidéo ? Tu l’as kiffé mais maintenant tu ne sais plus à quoi jouer ? Alors prend quelques minutes pour <b>faire notre test de personnalité concocté spécialement pour nos amis gamers ! </b>Ça t’évitera de perdre ton temps dans la rubrique des jeux du moment sur je ne sais quel site.";
-$i18n->presentation->p2 = "Et vu qu’on se fout pas de ta gueule, on a spécialement <b>créé un algorithme pour te proposer les jeux vidéo qui te correspondent vraiment</b>, basé sur le format du Big Five. En gros, c’est un repère psychologique pour la description et l’étude de la personnalité qui est utilisé fréquemment, par exemple pour des recrutements.";
-$i18n->presentation->p3 = "Pour découvrir de nouveaux jeux vidéo, il suffit de répondre à 10 affirmations très simples où il te faudra préciser ton niveau d’accord ou pas avec celles-ci. (Mythonnez pas les gars, on ne va pas vous juger, promis). Afin de ne pas tout mélanger, on triera les jeux en fonction de ce que t’as comme matos (Switch, PS4, Xbox One, Ordi et MacOs).";
-$i18n->presentation->p4 = "Après, tu découvres <b>ton profil catégorisé en quatre grandes parties :</b>";
-$i18n->presentation->p5 = "Pour chaque catégorie, une note sera attribuée allant de 0 à 5 en fonction de ce que tu as répondu précédemment. Selon ton profil, un ou plusieurs genres de jeux vidéo seront alors recommandés (aventure, stratégie, arcade, racing…), Ce qui n’exclut pas pour autant que d’autre genre de jeux vidéo apparaissent. <b>Les jeux vidéo proposés seront donc ceux qui colleront le plus à ta personnalité ! </b>";
-$i18n->presentation->p6 = "En parallèle à ton profil, tu verras apparaître directement vos (peut-être) futurs jeux vidéo ! Une liste allant jusqu’à 12 jeux adaptés à ta recherche est alors proposée, classés par date de sortie. Un petit aperçu des jeux est directement disponible et tu peux cliquer sur les jeux pour avoir plus d’information en te redirigeant vers RAWG, la plus grande base de données de jeux vidéo.";
-$i18n->presentation->p7 = "Et pour finir tu peux <b>partager tes résultats avec tes potes </b>en espérant que grâce à nous, le planning de tes prochaines soirées soit bouclé !";
-
-$i18n->presentation->l1 = "- Découverte";
-$i18n->presentation->l2 = "- Challenge";
-$i18n->presentation->l3 = "- Stimulation";
-$i18n->presentation->l4 = "- Immersion";
 ?>

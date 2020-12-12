@@ -13,11 +13,11 @@
                 <div class="col-lg-12 text-center">
                     <div class="contact-area deus_version deus_bloc">
                         <h1 class="title_deus_test"> <?php echo $i18n->deus_results->title; ?></h1>
-                        <div class="contact-form-area resultdiv mr-1 ml-1">
+                        <div class="contact-form-area resultdiv p-0 mr-1 ml-1">
                             <div class="row justify-content-center mb-30-none" id="deus_result">
-                                <div class="col-md-3">
+                                <div class="col-md-3" id="mobile_profile_slider">
+                                    <div id="mobile_profile_button_slider"> <i class="fas fa-user"></i> </div>
                                     <?php 
-
                                         /// MORE GLOBALS DATA GOES HERE
                                         //
                                         ///////
@@ -41,11 +41,14 @@
                                         //////
                                             // RECUPERATION DU FORMULAIRE ET CALCUL DES DONEES DE REFERENCE
                                             /////
+                                                $price_max = $_POST['price_max'];
                                                 // RECUPERATION DES MOTS CLES
                                                 //////
-                                                foreach($_POST['mode_id'] as $mode) {
-                                                    if($mode != '') {
-                                                        $config[] = $mode;
+                                                if($_POST['mode_id']) {
+                                                    foreach($_POST['mode_id'] as $mode) {
+                                                        if($mode != '') {
+                                                            $config[] = $mode;
+                                                        }
                                                     }
                                                 }
                                                 foreach(explode(",", $_POST['atout_id']) as $atout) {
@@ -104,10 +107,6 @@
                                                 ///////
                                                 $id_platform = $_POST['platform'];
                                                 $array_themes = $_POST['themes'];
-                                                $nouveaute_reference = 4;
-                                                $challenge_reference = 0;
-                                                $stimulation_reference = 0;
-                                                $harmonie_reference = 0;
                                             // SELECTION DE TOUS LES GENRES EN VUE DU CALCUL DU COEFFICIENT DE CHACUNS COMPARE AUX DONNEES DE REFERENCE
                                             /////
                                                 // INITIALISATIONS DES DONNEES AVANT LA BOUCLE
@@ -363,7 +362,7 @@
                                             <div class="col-lg-12 p-0 game_displayed" id="thisyear">
                                                 <script>
                                                     window.addEventListener("DOMContentLoaded", (event) => {
-                                                        do_the_deus_magic("<?php echo implode(',',$genres_inclus_string); ?>", <?php echo $id_platform; ?>,  <?php echo $today_timestamp; ?>,   1483228800 ,'thisyear', 6, "<?php echo implode(',',$keywords); ?>", "<?php echo $unic_id_save; ?>", '<?php echo $cssandjsurlfix; ?>');
+                                                        do_the_deus_magic("<?php echo implode(',',$genres_inclus_string); ?>", <?php echo $id_platform; ?>,  <?php echo $today_timestamp; ?>,   1483228800 ,'thisyear', 6, "<?php echo implode(',',$keywords); ?>", "<?php echo $unic_id_save; ?>", '<?php echo $cssandjsurlfix; ?>', <?php echo $price_max; ?>);
                                                     });
                                                 </script>
                                             </div>     
@@ -375,7 +374,7 @@
                                             <div class="col-lg-12 p-0 game_displayed" id="threetosevenyears">
                                                 <script>
                                                     window.addEventListener("DOMContentLoaded", (event) => {
-                                                        do_the_deus_magic("<?php echo implode(',',$genres_inclus_string); ?>", <?php echo $id_platform; ?>,  1483228800  , 1451606400 ,'threetosevenyears', 6, "<?php echo implode(',',$keywords); ?>", "<?php echo $unic_id_save; ?>", '<?php echo $cssandjsurlfix; ?>');
+                                                        do_the_deus_magic("<?php echo implode(',',$genres_inclus_string); ?>", <?php echo $id_platform; ?>,  1483228800  , 1451606400 ,'threetosevenyears', 6, "<?php echo implode(',',$keywords); ?>", "<?php echo $unic_id_save; ?>", '<?php echo $cssandjsurlfix; ?>', <?php echo $price_max; ?>);
                                                     });
                                                 </script>
                                             </div>    
@@ -387,7 +386,7 @@
                                             <div class="col-lg-12 p-0 game_displayed" id="morethansevenyears">
                                                 <script>
                                                     window.addEventListener("DOMContentLoaded", (event) => {
-                                                        do_the_deus_magic("<?php echo implode(',',$genres_inclus_string); ?>", <?php echo $id_platform; ?>,1451606400 , 1104537600  ,'morethansevenyears',6, "<?php echo implode(',',$keywords); ?>", "<?php echo $unic_id_save; ?>", '<?php echo $cssandjsurlfix; ?>');
+                                                        do_the_deus_magic("<?php echo implode(',',$genres_inclus_string); ?>", <?php echo $id_platform; ?>,1451606400 , 1104537600  ,'morethansevenyears',6, "<?php echo implode(',',$keywords); ?>", "<?php echo $unic_id_save; ?>", '<?php echo $cssandjsurlfix; ?>', <?php echo $price_max; ?>);
                                                     });
                                                 </script>
                                             </div>

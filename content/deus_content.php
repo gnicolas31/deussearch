@@ -68,6 +68,13 @@ function afficher_fin_de_step_buttons($i18n) {
                                         <option value="1" >Xbox One</option>
                                     </select>
                                 </div>
+                                <div class="deus_form pc_price">
+                                    <legend> Prix maximum </legend>
+                                    <div>
+                                        <span id="price_container"> 60 €</span> 
+                                        <input type="range" id="price_max" class="element" name="price_max" min="0" max="60" value="60" step="5">
+                                    </div>
+                                </div>
                             </div>
                             <span class="steps"><?php echo $i18n->deus_search->steps->step; ?> 1 - 4</span>
                             <input type="button" name="next" class="next action-button" value="<?php echo $i18n->deus_search->steps->next; ?>" />

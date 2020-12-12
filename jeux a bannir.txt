@@ -9,5 +9,43 @@ The Beginner's Guide
 The pitchers (que goty)
 
 
-Offre de service (DOI, Développement spécifiques, ..)
-Typologie du projet (projets internationaux)
+To do
+
+ESPACE PERSONNEL
+
+	Espace personnel créable avec un identifiant unique et secret dont l'user doit se souvenir
+	il comporte les recherches a associé avec lui
+
+	Comment identifier l'user ?
+		- l'identifiant de l'espace personnel peut etre enregistrable dans les cookies
+
+	comment associer les recherches à un espace perso ?
+		- Au resultat, un bouton est disponible pour 
+			- si non identifié : associer la recherche a l'espace renseigné par l'user dans un champs texte
+			- si identifié : associe la recherche directement 
+
+	un lien "espace perso" est disponible ou il suffit a l'user de rentrer l'identifiant unique de son espace perso pour afficher les recherches correspondantes
+		- il peut trouver toutes ses recherches sur une page
+		- il peut renommer ses recherches
+		- il peut délier ses recherches
+
+RECHERCHE CROISEE
+
+	Une page permet de croiser des recherches, c'est à dire de renseigner, dans des champs textes les identifiants des recherches et rechercher les jeux correspondant aux X recherches
+	Renseigner entre 2 et 5 recherches maximale
+
+	technique :
+		genres : l'algo prend une moyenne des 4 axes de personnalité
+		mots clés : prend en compte seulement les mots clés qui apparaissent sur les plusieurs recherches, retire le mot clé singleplayer si il y est
+
+TEST DEUS SEARCH
+
+	Ajouter des interactions :
+		- J'ai déjà joué à ce jeu 
+		- Je n'aime pas ce jeu
+
+		Définir les conséquences des actions sur la recherche et les résultats
+
+		Possible de faire ca sans trop d'infos en mettant des icones sur téléphone, et un pop up horizontal sur tablette / pc 
+
+	Mettre en avant les partage sur les réseaux sociaux
