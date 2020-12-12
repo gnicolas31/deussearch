@@ -139,21 +139,4 @@ $i18n->contact->text = "We respond quickly and will be happy to deal with your r
     $i18n->contact->form->button = "Send";
     $i18n->contact->form->success = "Mail has been sent.";
 
-// PRESENTATION
-//////
-$i18n->presentation->main_title = "DeusSearch presentation";
-
-$i18n->presentation->title = "DeusSearch: Find your video game with a proven personality test! ";
-$i18n->presentation->p1 = "Did you just finish your video game? You liked it but now you don't know what to play? Then take a few minutes to take our personality test specially concocted for our gamers friends! </It will save you from wasting your time in the section of the games of the moment on I don't know which site.";
-$i18n->presentation->p2 = "And since we're not kidding you, we specially created an algorithm to propose you the video games that really fits you, based on the Big Five format. Basically, it's a psychological benchmark for the description and study of personality which is frequently used, for example for recruitment purposes. If you're really curious, we've written an article that talks about all this in more detail, it's here : The Big Five: the 5 main factors of personality. ";
-$i18n->presentation->p3 = "To discover new video games, just answer 10 very simple statements where you will have to specify your level of agreement or disagreement with them. (Don't lie guys, we won't judge you, we promise). In order not to mix everything up, we'll sort the games according to what you have (Switch, PS4, Xbox One, Ordi et MacOs). ";
-$i18n->presentation->p4 = "Afterwards, you discover your profile categorized in four main parts :";
-$i18n->presentation->p5 = "For each category, a score will be given from 0 to 5 depending on what you answered previously. Depending on your profile, one or more genres of video games will be recommended (adventure, strategy, arcade, racing...), those that do not exclude other genres of video games will appear. The video games proposed will be the ones that fit your personality the most!";
-$i18n->presentation->p6 = "In parallel to your profile, you will see directly your (maybe) future video games! A list up to 12 games adapted to your search is then proposed, sorted by release date. A small preview of the games is directly available and you can click on the games to get more information by redirecting you to RAWG, the largest database of video games.";
-$i18n->presentation->p7 = "And finally you can share your results with your friends and hope that thanks to us, the planning of your next parties will be completed!";
-
-$i18n->presentation->l1 = "- Discovery";
-$i18n->presentation->l2 = "- Challenge";
-$i18n->presentation->l3 = "- Stimulation";
-$i18n->presentation->l4 = "- Immersion";
 ?>

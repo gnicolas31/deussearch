@@ -18,21 +18,17 @@
             <div class="row justify-content-center">
                 <div class="col-lg-12 text-center">
                     <div class="contact-area">
-                        <h2> <?php echo $i18n->presentation->title; ?></h2>
-                        <p><?php echo $i18n->presentation->p1; ?></p>
-                        <p> <?php echo $i18n->presentation->p2; ?></p>
-                        <p> <?php echo $i18n->presentation->p3; ?> </p>
-                        <p> <?php echo $i18n->presentation->p4; ?>
-                            <ul>
-                                <li><?php echo $i18n->presentation->l1; ?></li>
-                                <li><?php echo $i18n->presentation->l2; ?></li>
-                                <li><?php echo $i18n->presentation->l3; ?></li>
-                                <li><?php echo $i18n->presentation->l4; ?></li>
-                            </ul>   
-                        </p>
-                        <p><?php echo $i18n->presentation->p5; ?></p>
-                        <p><?php echo $i18n->presentation->p6; ?></p>
-                        <p><?php echo $i18n->presentation->p7; ?></p>
+                        <?php 
+                        if($lang == 'en') {
+                            $content_page_id = '8';
+                        } 
+                        if($lang == 'fr') {
+                            $content_page_id = '5';
+                        }
+                            $json = file_get_contents('https://blog.deussearch.fr/wp-json/wp/v2/pages/'.$content_page_id);
+                            $obj = json_decode($json);
+                            echo $obj->content->rendered;
+                        ?>
                     </div>
                 </div>
             </div>

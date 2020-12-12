@@ -16,7 +16,7 @@
     <!-- favicon -->
     <link rel="shortcut icon" href="<?php echo $cssandjsurlfix; ?>assets/images/banner/fav.png" type="image/x-icon">
     <!-- responsive css link -->
-    <link rel="stylesheet" href="<?php echo $cssandjsurlfix; ?>assets/css/style.min.css">
+    <link rel="stylesheet" href="<?php echo $cssandjsurlfix; ?>assets/css/style.css">
     <link rel="stylesheet" href="<?php echo $cssandjsurlfix; ?>assets/css/responsive.css">
 
 

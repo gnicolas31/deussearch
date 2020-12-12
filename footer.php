@@ -71,7 +71,7 @@
                     </div>
                     <div class="copyright-area d-flex flex-wrap justify-content-between">
                         <div class="copyright-content">
-                            <p>V1.0.0 - Copyright © <?php echo date(Y); ?>.<span>All Rights Reserved By </span><a href="#">DeusSearch</a></p>
+                            <p>V1.1.0 - Copyright © <?php echo date(Y); ?>.<span>All Rights Reserved By </span><a href="#">DeusSearch</a></p>
                         </div>
                         <ul class="blog-social">
                             <li><a href="https://www.facebook.com/DeusSearch" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
@@ -120,7 +120,7 @@ $('#deus_form').submit(function () {
 </script>
 
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-<script src="<?php echo $cssandjsurlfix; ?>deussearch.min.js"></script>
+<script src="<?php echo $cssandjsurlfix; ?>deussearch.js"></script>
 <!-- migarate-jquery -->
 <script src="<?php echo $cssandjsurlfix; ?>assets/js/jquery-migrate-3.0.0.js"></script>
 <!-- bootstrap js -->

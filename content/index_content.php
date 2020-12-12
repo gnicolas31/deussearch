@@ -208,18 +208,63 @@
         <div class="container deus_list_index">
                 <h2> <?php echo $i18n->index->streamer_title; ?> </h2>
                 <h3> <?php echo $i18n->index->streamer_text; ?>  </h3>
-                <div class="row">
-                    <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
-                    <div id="twitch-embed" class="twitch_embed"></div>
-                    <script type="text/javascript">
-                    new Twitch.Embed("twitch-embed", {
-                        width: 854,
-                        height: 480,
-                        channel: "maaedra"
-                    });
-                    </script>
+
+
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+                        <div id="twitch-embed-maaedra" class="twitch_embed"></div>
+                        <script type="text/javascript">
+                        new Twitch.Embed("twitch-embed-maaedra", {
+                            width: 854,
+                            height: 480,
+                            channel: "maaedra"
+                        });
+                        </script>
+                    </div>
                 </div>
+                <div class="carousel-item">
+            
+                    <div class="row">
+                        <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+                        <div id="twitch-embed-tekipek" class="twitch_embed"></div>
+                        <script type="text/javascript">
+                        new Twitch.Embed("twitch-embed-tekipek", {
+                            width: 854,
+                            height: 480,
+                            channel: "tekipek"
+                        });
+                        </script>
+                    </div>
+                </div>
+                <div class="carousel-item">
+        
+                    <div class="row">
+                        <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+                        <div id="twitch-embed-maaedra3" class="twitch_embed"></div>
+                        <script type="text/javascript">
+                        new Twitch.Embed("twitch-embed-maaedra3", {
+                            width: 854,
+                            height: 480,
+                            channel: "maaedra"
+                        });
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+            </div>
         </div>
+
         <div class="container deus_list_index">
                 <h2> <?php echo $i18n->index->last_results->title; ?></h2>
                 <h3> <?php echo $i18n->index->last_results->blue_title; ?> </h3>
