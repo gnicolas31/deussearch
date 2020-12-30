@@ -78,6 +78,7 @@
                         2 licences <a target="_blank" href="https://store.steampowered.com/app/1145360/">Hadès</a> à gagner ce mois-ci sur la plateforme de votre choix en participant aux concours sur les réseaux sociaux !
                     </p>
                     <a class="social" href="https://www.facebook.com/DeusSearch" target="_blank" title="DeusSearch sur Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a class="social ml-3" href="https://twitter.com/DeusSearch/status/1338771587022131200" target="_blank" title="Concours Deussearch sur Twitter"><i class="fab fa-twitter"></i></a>
                 </div>
                 </div>
               
@@ -204,65 +205,67 @@
             <img src="<?php echo $cssandjsurlfix; ?>assets/images/about/icon-9.png" alt="icon">
         </div>
       
-        <script src="https://embed.twitch.tv/embed/v1.js"></script>
         <div class="container deus_list_index">
                 <h2> <?php echo $i18n->index->streamer_title; ?> </h2>
                 <h3> <?php echo $i18n->index->streamer_text; ?>  </h3>
-
-
-            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="row">
-                        <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
-                        <div id="twitch-embed-maaedra" class="twitch_embed"></div>
-                        <script type="text/javascript">
-                        new Twitch.Embed("twitch-embed-maaedra", {
-                            width: 854,
-                            height: 480,
-                            channel: "maaedra"
-                        });
-                        </script>
-                    </div>
-                </div>
-                <div class="carousel-item">
             
-                    <div class="row">
-                        <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
-                        <div id="twitch-embed-tekipek" class="twitch_embed"></div>
-                        <script type="text/javascript">
-                        new Twitch.Embed("twitch-embed-tekipek", {
-                            width: 854,
-                            height: 480,
-                            channel: "tekipek"
-                        });
-                        </script>
-                    </div>
-                </div>
-                <div class="carousel-item">
-        
-                    <div class="row">
-                        <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
-                        <div id="twitch-embed-maaedra3" class="twitch_embed"></div>
-                        <script type="text/javascript">
-                        new Twitch.Embed("twitch-embed-maaedra3", {
-                            width: 854,
-                            height: 480,
-                            channel: "maaedra"
-                        });
-                        </script>
-                    </div>
-                </div>
+            <div class="deus_index_row_games streamers_row mb-5 pb-5">
+                <?php 
+
+                    $streamers = array(['Maaedra', 468090936, 'https://www.deussearch.fr/assets/css/img/streamers/maedra.jpg', 'offline'],
+                                        ['ThoomaasTV', 527024760, 'https://www.deussearch.fr/assets/css/img/streamers/thomas.jpg', 'offline' ]);
+
+
+                    $twitch_token = file_get_contents('https://id.twitch.tv/oauth2/token', false, stream_context_create([
+                        'http' => [
+                            'method' => 'POST',
+                            'header'  => "Content-type: application/x-www-form-urlencoded",
+                            'content' => http_build_query([
+                                'client_id' => 'xuva920klocy59s4j33en9y5zr9a34', 'client_secret' => 'mbehc911xttbt1t9zpwj59z4pwvwjv', 'grant_type' => 'client_credentials'
+                            ])
+                        ]
+                    ]));
+                    $twitch_token = json_decode($twitch_token);
+                    $twitch_token = $twitch_token->access_token;
+
+
+                    foreach($streamers as $streamer) {
+                        $cURLConnection = curl_init();
+
+                        curl_setopt($cURLConnection, CURLOPT_URL, 'https://api.twitch.tv/helix/streams/?user_id='.$streamer[1]);
+                        curl_setopt($cURLConnection, CURLOPT_RETURNTRANSFER, true);
+                        curl_setopt($cURLConnection , CURLOPT_HTTPHEADER, array(
+                            'client-id: xuva920klocy59s4j33en9y5zr9a34',
+                            'Authorization: Bearer '. $twitch_token
+                        ));
+                        $infoscurls = curl_exec($cURLConnection);
+                        $streamer_info = json_decode($infoscurls);
+                        curl_close($cURLConnection);
+                        if(empty($streamer_info->data) == false) {
+                            $streamer[3] = 'online';
+                        }
+                        ?>
+                            <div class="streamerbackground pt-5 pb-2 <?php echo $streamer[3]; ?>" style="background:url('<?php echo $streamer[2]; ?>')">
+                                <a target="_blank" href="https://www.twitch.com/<?php echo $streamer[0]; ?>">
+                                    <div class="title"> 
+                                        <h4> <?php echo $streamer[0]; ?> </h4>
+                                        <?php 
+                                            if($streamer[3] == 'online') {
+                                                echo '<span class="succ"> Online -  '.$streamer_info->data[0]->game_name.' </span>';
+                                            } else {
+                                                echo '<span class="err"> Offline </span>';
+                                            }
+                                        ?>
+                                    </div>
+                                </a>
+                            </div>
+                        <?php 
+                    }
+
+                
+                ?>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-            </div>
+            
         </div>
 
         <div class="container deus_list_index">

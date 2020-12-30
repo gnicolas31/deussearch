@@ -36,13 +36,40 @@ $deus_results = [];
 $deus_request_result = $conn->query($deus_request_construct);
 while($deus_result = mysqli_fetch_array($deus_request_result))
 {
-    $deus_results[] = $deus_result;
+
+//    $deus_result['3'] = str_replace("'", " ", $deus_result['3']);
+//    $deus_result['game_name'] = str_replace("'", " ", $deus_result['game_name']);
+    $deus_result['3'] = utf8_encode($deus_result['3']);
+    $deus_result['game_name'] = utf8_encode( $deus_result['game_name']); 
+  
+      
+    $deus_results[] = $deus_result; 
 }
 
-//var_dump($deus_results);
-//var_dump(json_encode($deus_results));
-
 echo json_encode($deus_results);
+// switch (json_last_error()) {
+//     case JSON_ERROR_NONE:
+//         echo ' - Aucune erreur';
+//     break;
+//     case JSON_ERROR_DEPTH:
+//         echo ' - Profondeur maximale atteinte';
+//     break;
+//     case JSON_ERROR_STATE_MISMATCH:
+//         echo ' - Inadéquation des modes ou underflow';
+//     break;
+//     case JSON_ERROR_CTRL_CHAR:
+//         echo ' - Erreur lors du contrôle des caractères';
+//     break;
+//     case JSON_ERROR_SYNTAX:
+//         echo ' - Erreur de syntaxe ; JSON malformé';
+//     break;
+//     case JSON_ERROR_UTF8:
+//         echo ' - Caractères UTF-8 malformés, probablement une erreur d\'encodage';
+//     break;
+//     default:
+//         echo ' - Erreur inconnue';
+//     break;
+//} 
 
 
 ?>

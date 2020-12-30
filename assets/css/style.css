@@ -3089,6 +3089,20 @@ a {
   display: block;
 }
 
+.deus_canvas .deus_result_social {
+  background: #213772;
+  padding: 10px 15px;
+}
+
+
+.deus_canvas .deus_result_social ul {
+  margin: 0;
+}
+
+.deus_canvas .deus_result_social span {
+  color: #ccc;
+}
+
 .contact-form .col-lg-12 {
   margin-bottom: 1em;
 }
@@ -3673,4 +3687,50 @@ input[type=range]:focus::-ms-fill-lower {
 }
 input[type=range]:focus::-ms-fill-upper {
   background: #161643;
+}
+
+.progress {
+  margin-left: 2em !important;
+  margin-right: 2em !important;
+}
+
+.progress-bar {
+  background-color: #1861b0 !important;
+}
+
+.streamers_row>div {
+  min-height: 250px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.streamers_row>div>a {
+  height: 100%;
+  width: 100%;
+}
+
+.streamers_row>div.offline {
+  filter: grayscale(1);
+}
+
+.streamers_row>div:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 20px 5px rgba(0, 170, 255, .25);
+}
+
+.streamers_row>div .title {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 15px;
+  left: 0;
+}
+
+.streamers_row>div span {
+  font-variant: all-petite-caps;
+}
+
+.streamers_row>div .title span.succ {
+  color: #1cc81c;
 }
